@@ -5,7 +5,7 @@ slug: hello-world
 date: 2024-09-04 20:07:00+0000
 image: cover.png
 categories:
-    - 杂货
+    - example-category
 tags:
     - 第一次
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
