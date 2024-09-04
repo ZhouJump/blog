@@ -1,20 +1,14 @@
 ---
-title: Hello World
-description: Welcome to Hugo Theme Stack
+title: 你好，世界！
+description: 第一篇测试帖子
 slug: hello-world
-date: 2022-03-06 00:00:00+0000
+date: 2024-09-04 20:07:00+0000
 image: cover.png
 categories:
-    - Example Category
+    - 杂货
 tags:
-    - Example Tag
+    - 第一次
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
-Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!
-
-For more information about this theme, check the documentation: https://stack.jimmycai.com/
-
-Want a site like this? Check out [hugo-theme-stack-stater](https://github.com/CaiJimmy/hugo-theme-stack-starter)
-
-> Photo by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski) on [Unsplash](https://unsplash.com/)
+堂堂写文
