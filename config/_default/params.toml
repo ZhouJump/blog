@@ -77,7 +77,7 @@ enabled = true
 ## Comments
 [comments]
 enabled = true
-provider = "cactus"
+provider = "waline"
 
 [comments.disqusjs]
 shortname = ""
@@ -105,8 +105,8 @@ clientSecret = ""
 autoCreateIssue = false
 
 [comments.waline]
-serverURL = ""
-lang = ""
+serverURL = "comments.zhoujump.club"
+lang = "zh-cn"
 visitor = ""
 avatar = ""
 emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
@@ -125,7 +125,7 @@ lang = ""
 [comments.cactus]
 defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
 serverName = "cactus.chat"
-siteName = ""
+siteName = "zhous-blog"
 
 [comments.giscus]
 repo = ""
