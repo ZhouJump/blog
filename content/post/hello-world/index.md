@@ -3,7 +3,7 @@ title: 你好，世界！
 description: Welcome to Hugo Theme Stack
 slug: hello-world
 date: 2024-09-04 19:51:00+0000
-image: cover.avif
+image: cover.jpg
 categories:
     - 杂货
 tags:
