@@ -1,13 +1,13 @@
 ---
-title: 你好，世界！
-description: 第一篇测试帖子
+title: Hello World
+description: Welcome to Hugo Theme Stack
 slug: hello-world
-date: 2024-09-04 20:07:00+0000
+date: 2022-03-06 00:00:00+0000
 image: cover.png
 categories:
     - Example Category
 tags:
-    - 第一次
+    - Example Tag
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
