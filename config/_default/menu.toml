@@ -8,16 +8,16 @@ icon = "home"
 newtab = true
 
 [[social]]
-identifier = "github"
-name = "GitHub"
-url = "https://github.com/CaiJimmy/hugo-theme-stack"
+identifier = "gitlab"
+name = "GitLab"
+url = "https://gitlab.com/zhoujump"
 
 [social.params]
-icon = "brand-github"
+icon = "brand-gitlab"
 
 [[social]]
-identifier = "twitter"
-name = "Twitter"
+identifier = "bilibili"
+name = "BiliBili"
 url = "https://twitter.com"
 
 [social.params]
