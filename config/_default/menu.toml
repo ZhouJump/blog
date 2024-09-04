@@ -9,7 +9,7 @@ newtab = true
 
 [[social]]
 identifier = "gitlab"
-name = "GitLab"
+name = "极狐仓库"
 url = "https://gitlab.com/zhoujump"
 
 [social.params]
@@ -17,8 +17,8 @@ icon = "brand-gitlab"
 
 [[social]]
 identifier = "bilibili"
-name = "BiliBili"
-url = "https://twitter.com"
+name = "哔哩哔哩主页"
+url = "https://space.bilibili.com/346093756"
 
 [social.params]
 icon = "brand-bilibili"
