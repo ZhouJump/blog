@@ -1,5 +1,5 @@
 ---
-title: "友情链接"
+title: "友链"
 links:
   - title: GitHub
     description: Github是全球最大的同性交友网站
