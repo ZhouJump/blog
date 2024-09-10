@@ -13,5 +13,3 @@ menu:
 
 comments: false
 ---
-
-友情链接
