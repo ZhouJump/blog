@@ -110,7 +110,8 @@ lang = "zh-CN"
 visitor = ""
 avatar = ""
 emoji = ["https://unpkg.com/@waline/emojis@1.1.0/weibo"]
-requiredMeta = ['nick', 'mail']
+meta = ['nick', 'mail']
+requiredMeta = ['nick']
 placeholder = "留下你的评论吧！"
 
 [comments.waline.locale]
