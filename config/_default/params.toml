@@ -106,12 +106,12 @@ autoCreateIssue = false
 
 [comments.waline]
 serverURL = "comments.zhoujump.club"
-lang = "zh-cn"
+lang = "zh-CN"
 visitor = ""
 avatar = ""
-emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
-requiredMeta = ["name", "email", "url"]
-placeholder = ""
+emoji = ["https://unpkg.com/@waline/emojis@1.1.0/weibo"]
+requiredMeta = ["name", "email"]
+placeholder = "留下你的评论吧！"
 
 [comments.waline.locale]
 admin = "Admin"
