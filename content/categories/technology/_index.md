@@ -1,6 +1,6 @@
 ---
-title: 杂货
-description: 一些无关紧要的碎碎念
+title: 技术分享
+description: 一些技术教程分享
 image: image.png
 
 # Badge style
