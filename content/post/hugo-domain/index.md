@@ -3,7 +3,7 @@ title: HUGO，域名！
 description: 有关域名选购和gitlab pages的域名绑定问题
 slug: hugo-domain
 date: 2024-09-17 00:00:00+0000
-image: ../hugo-start/cover.png
+image: cover.png
 categories:
     - technology
 tags:
