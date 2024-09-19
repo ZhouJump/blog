@@ -112,6 +112,7 @@ avatar = ""
 emoji = ["https://unpkg.com/@waline/emojis@1.1.0/weibo"]
 meta = ['nick', 'mail']
 requiredMeta = ['nick']
+pageview = true
 
 [comments.waline.locale]
 admin = "Admin"
