@@ -47,6 +47,16 @@ meta = ['nick', 'mail']//填写你想让用户留下的信息
 requiredMeta = ['nick']//填写用户必填信息，为空则允许匿名
 placeholder = "留下你的评论吧！"
 ```
+
+然后是77行的代码
+
+```go
+## Comments
+[comments]
+enabled = true
+provider = "waline"
+```
+
 有关此处配置的详细信息可以[点击这里](https://waline.js.org/reference/client/props.html#meta)详细了解
 
 编辑完，然后保存。等待流水线运行，之后你就能看见在文章末尾出现评论区了。
