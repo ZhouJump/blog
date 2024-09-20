@@ -59,7 +59,10 @@ createApp({
         this.info.date=this.getUrlKey('e')
         this.info.dus=this.getUrlKey('u')
         this.info.phone=this.getUrlKey('p')
-        this.creatQR()
+        Vue.nextTick(()=>{
+            this.creatQR() 
+        })
+        
         }
     else
     {
