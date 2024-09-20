@@ -24,7 +24,7 @@ createApp({
         let info = this.info
         new QRCode(document.getElementById("qrcode"),
             {
-                text:"https://blog.zhoujump.club/blood-card"
+                text:"https://blog.zhoujump.club/blood-card/index.html"
                 +'?n='+info.name
                 +'&i='+info.idType
                 +'&d='+info.id
@@ -59,6 +59,7 @@ createApp({
         this.info.date=this.getUrlKey('e')
         this.info.dus=this.getUrlKey('u')
         this.info.phone=this.getUrlKey('p')
+        this.creatQR()
         }
     else
     {
