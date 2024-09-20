@@ -21,7 +21,6 @@ createApp({
   },
   methods: {
     creatQR(){
-        if(this.input) return 0
         let info = this.info
         new QRCode(document.getElementById("qrcode"),
             {
@@ -64,7 +63,6 @@ createApp({
         Vue.nextTick(()=>{
             this.creatQR() 
         })
-        
         }
     else
     {
