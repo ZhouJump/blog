@@ -1,2 +1,2 @@
 
-[粥粥个人博客](blog.zhoujump.club)
+[粥粥个人博客](https://blog.zhoujump.club)
