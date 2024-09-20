@@ -20,9 +20,8 @@ input{
 }
 #qrcode{
     position: absolute;
-    width: 8%;
-    padding-bottom: 8%;/* padding百分比相对父元素宽度计算 */
-    height: 0;
+    width: 60px;
+    height: 60px;
     bottom: 2.4%;
     left: 30.4%;
 }
