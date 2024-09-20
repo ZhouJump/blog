@@ -1,0 +1,28 @@
+html,body,#app{
+    margin: 0;
+    padding: 0;
+}
+#app{
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+img{
+    width:100%;
+}
+input{
+    position: absolute;
+    left: 30%;
+    font-size: 1.6em;
+    background: none;
+    border: none;
+    color: rgb(95, 95, 95);
+}
+#qrcode{
+    position: absolute;
+    width: 32%;
+    padding-bottom: 32%;/* padding百分比相对父元素宽度计算 */
+    height: 0;
+    bottom: 2.4%;
+    left: 30.4%;
+}

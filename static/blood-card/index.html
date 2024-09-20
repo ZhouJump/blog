@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电子献血证</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <img title="献血证" src="card.jpg" />
+        <input :disabled="input" v-model="info.name" style="top:7.8%;width: 6em;"/>
+        <input :disabled="input" v-model="info.idType" style="top:13.2%;width: 6em;"/>
+        <input :disabled="input" v-model="info.id" style="top:19%"/>
+        <input :disabled="input" v-model="info.bloodType" style="top:24.4%;left: 34%;width: 3em;"/>
+        <input :disabled="input" v-model="info.donateType" style="top:24%;left: 74%;width: 3em;"/>
+        <input :disabled="input" v-model="info.num" style="top:30%;width: 8em;"/>
+        <input :disabled="input" v-model="info.donateId" style="top:41%;width: 8em;"/>
+        <input :disabled="input" v-model="info.address" style="top:52%;width: 8em;"/>
+        <input :disabled="input" v-model="info.date" style="top:57.8%;width: 8em;"/>
+        <input :disabled="input" v-model="info.dus" style="top:63%;width: 8em;"/>
+        <input :disabled="input" v-model="info.phone" style="top:69%;width: 8em;"/>
+        <div @click="creatQR" id="qrcode"></div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="qrcode.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
