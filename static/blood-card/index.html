@@ -20,6 +20,17 @@
         <input :disabled="input" v-model="info.date" style="top:57.8%;width: 8em;"/>
         <input :disabled="input" v-model="info.dus" style="top:63%;width: 8em;"/>
         <input :disabled="input" v-model="info.phone" style="top:69%;width: 8em;"/>
+        <div class="zhang">
+            <div>献血专用章</div>
+            <svg viewBox="0 0 100 100">
+                <path id="circle" d="M10 30 Q50 0 90 30"></path>
+                <text font-size="12" fill="red" >
+                    <textPath xlink:href="#circle">
+                    {{info.dus}}
+                    </textPath>
+                </text>
+            </svg>
+        </div>
         <div @click="creatQR" id="qrcode"></div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
