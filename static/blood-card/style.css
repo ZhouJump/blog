@@ -25,3 +25,8 @@ input{
     bottom: 2.4%;
     left: 30.4%;
 }
+
+#qrcode canvas + img {
+    width: 100%;
+    height: 100%;
+  }

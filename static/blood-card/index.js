@@ -37,7 +37,8 @@ createApp({
                 +'&u='+info.dus
                 +'&p='+info.phone
                 +'&l=1',
-                correctLevel : QRCode.CorrectLevel.M
+                correctLevel : QRCode.CorrectLevel.M,
+                
         }
         )
     },
