@@ -3,7 +3,7 @@ title: 使用contenteditable实现变宽输入框
 description: 利用contenteditable属性实现不定宽度的输入框
 slug: contenteditable-input
 date: 2024-09-24 00:00:00+0000
-image: cover.png
+image: cover.jpeg
 categories:
     - technology
 tags:
