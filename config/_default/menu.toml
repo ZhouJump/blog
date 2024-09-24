@@ -21,3 +21,11 @@ url = "https://space.bilibili.com/346093756"
 
 [social.params]
 icon = "brand-bilibili"
+
+[[social]]
+identifier = "rss"
+name = "订阅RSS"
+url = "https://blog.zhoujump.club/index.xml"
+
+[social.params]
+icon = "brand-svg"
