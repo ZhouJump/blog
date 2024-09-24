@@ -28,4 +28,4 @@ name = "订阅RSS"
 url = "https://blog.zhoujump.club/index.xml"
 
 [social.params]
-icon = "brand-svg"
+icon = "brand-rss"
