@@ -1,7 +1,7 @@
 ---
 title: 不使用js实现评分组件
 description: 灵活使用兄弟选择器搭配<input type="radio">纯CSS实现评分组件
-slug: checked-css
+slug: input-star
 date: 2024-09-25 00:00:00+0000
 image: cover.jpeg
 categories:
