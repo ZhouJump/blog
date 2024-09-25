@@ -14,14 +14,14 @@ weight: 1
 ## 先看效果
 你可以通过点击来切换不同的选项，而这个样例没有使用js而是完全使用css实现的。
 <div class="cont">
-    <input checked type="radio" id="radio1" name="radio"/>
-    <label for="radio1">选项1</label>
-    <input type="radio" id="radio2" name="radio"/>
-    <label for="radio2">选项2</label>
-    <input type="radio" id="radio3" name="radio"/>
-    <label for="radio3">选项3</label>
-    <input type="radio" id="radio4" name="radio"/>
-    <label for="radio4">选项4</label>
+    <input class="input" checked type="radio" id="radio1" name="radio"/>
+    <label class="label" for="radio1">选项1</label>
+    <input class="input" type="radio" id="radio2" name="radio"/>
+    <label class="label" for="radio2">选项2</label>
+    <input class="input" type="radio" id="radio3" name="radio"/>
+    <label class="label" for="radio3">选项3</label>
+    <input class="input" type="radio" id="radio4" name="radio"/>
+    <label class="label" for="radio4">选项4</label>
 </div>
 <style>
     .cont{
@@ -29,7 +29,7 @@ weight: 1
         line-height: 120px;
         text-align: center;
     }
-    label{
+    .label{
         margin-right: 10px;
         width: 60px;
         height: 120px;
@@ -37,10 +37,10 @@ weight: 1
         border-radius: 10px;
         transition-duration:.3s;
     }
-    input{
+    .input{
         display: none;
     }
-    input:checked + label{
+    .input:checked + .label{
         transition-duration:.3s;
         width: 120px;
         background:#99e6ff;
