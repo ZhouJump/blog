@@ -1,6 +1,6 @@
 ---
-title: 使用网格布局实现auto height过渡
-description: 巧用grid布局优雅实现 定高定宽向不定宽高之间的过渡
+title: 为不确定高度的元素添加过渡动画
+description: 巧用grid布局优雅实现 定高定宽向不定宽高height:auto之间的过渡
 slug: grid-transition
 date: 2024-09-24 00:00:00+0000
 image: cover.jpeg
