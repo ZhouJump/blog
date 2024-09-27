@@ -18,15 +18,16 @@ weight: 1
 .waifu{
     margin: auto;
     background:#99e6ff;
+    display: block;
     width: 160px;
     height: 40px;
     border-radius: 10px;
     line-height:40px;
     text-align:center;
     cursor: grab;}
-.waifu::after{content: '拖拽至收藏夹栏';}
-.waifu:hover::after{content: '按住鼠标左键拖拽';}
-.waifu:active::after{content: '拖至收藏夹栏松开';}
+.waifu::before{content: '拖拽至收藏夹栏';}
+.waifu:hover::before{content: '按住鼠标左键拖拽';}
+.waifu:active::before{content: '拖至收藏夹栏松开';}
 </style>
 然后我们随意打开一个网站，点击这个书签，看板娘就会出现在网页上啦！
 ![在B站召唤看板娘](1-1.png)
