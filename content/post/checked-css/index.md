@@ -96,7 +96,10 @@ weight: 1
 使用这种技巧能实现的效果能远超你的想象。
 
 ## 相关知识
-[input的radio类型](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/radio)
-[:checked伪类选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:checked)
-[相邻兄弟选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Next-sibling_combinator)
+[input的radio类型](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input/radio);
+
+[:checked伪类选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:checked);
+
+[相邻兄弟选择器](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Next-sibling_combinator);
+
 [lable及其for属性](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/label#%E5%B1%9E%E6%80%A7)
