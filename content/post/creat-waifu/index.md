@@ -18,7 +18,6 @@ weight: 1
 .waifu{
     margin: auto;
     background:#99e6ff;
-    display: block;
     width: 160px;
     height: 40px;
     border-radius: 10px;
