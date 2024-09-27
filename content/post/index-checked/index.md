@@ -2,7 +2,7 @@
 title: 不使用js实现循环翻牌效果
 description: 巧用z-index与后续兄弟选择器实现循环翻牌效果
 slug: index-checked
-date: 2023-09-27 00:00:00+0000
+date: 2024-09-27 00:00:00+0000
 image: cover.jpg
 categories:
     - technology
