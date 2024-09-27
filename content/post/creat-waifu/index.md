@@ -13,7 +13,7 @@ weight: 1
 ---
 ## 如何使用
 将下面这个蓝色方块拖拽至收藏夹栏再松开鼠标，浏览器会自动创建一个书签。
-<a class="waifu" herf="javascript:var link = document.createElement('link');link.rel = 'stylesheet';link.href = 'https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css';var script = document.createElement('script');script.src = 'https://fastly.jsdelivr.net/gh/lrplrplrp/bkyl2d@main/loads.js';document.head.appendChild(link);document.head.appendChild(script);">拖拽至收藏夹栏</a>
+<a class="waifu" href="javascript:var link = document.createElement('link');link.rel = 'stylesheet';link.href = 'https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css';var script = document.createElement('script');script.src = 'https://fastly.jsdelivr.net/gh/lrplrplrp/bkyl2d@main/loads.js';document.head.appendChild(link);document.head.appendChild(script);"></a>
 <style>
 .waifu{
     margin: auto;
@@ -25,6 +25,9 @@ weight: 1
     line-height:40px;
     text-align:center;
     cursor: grab;}
+.waifu::before{content: '拖拽至收藏夹栏';}
+.waifu:hover::before{content: '按住鼠标左键拖拽';}
+.waifu:active::before{content: '拖至收藏夹栏松开';}
 </style>
 然后我们随意打开一个网站，点击这个书签，看板娘就会出现在网页上啦！
 ![在B站召唤看板娘](1-1.png)
