@@ -16,13 +16,13 @@ weight: 1
 点击卡片就能切换一张，并且整个实现过程并没有用到js。这个样例中除了两张卡片外其实还有两个透明的`input`，你点击到的其实是这俩`input`，而且这俩`input`会在点击后修改自身的`z-index`属性，保证你下次点击必定会点击到另外一个。
 
 <div class="box">
-    <input class="radio1" type="radio" name="card"/>
-    <input class="radio2" type="radio" name="card"/>
+    <input class="radio1" type="radio" name="cardd"/>
+    <input class="radio2" type="radio" name="cardd"/>
     <div style="background:#F1948A" class="card1"></div>
     <div style="background:#AED6F1" class="card2"></div>
 </div>
 <style>
-    [class*="card"]{
+    [class*="cardd"]{
         width: 200px;
         height: 300px;
         position: absolute;
