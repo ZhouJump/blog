@@ -65,11 +65,11 @@ weight: 1
 ```html
 <!-- 这个a标签设置了pointer-events: auto -->
 <a style="pointer-events: auto;"
-    herf='https://blog.zhoujump.club'
-    target="_blank">pointer-events: auto</a>
+    href='https://blog.zhoujump.club'
+    target="_blank">pointer-events: auto</a><br/>
 <!-- 这个a标签设置了pointer-events: auto -->
 <a style="pointer-events: none;" 
-    herf='https://blog.zhoujump.club'
+    href='https://blog.zhoujump.club'
     target="_blank">pointer-events: none</a>
 ```
 
