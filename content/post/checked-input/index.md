@@ -60,6 +60,7 @@ weight: 1
 ## pointer-events
 我们都知道可以通过`<input disabled="true"/>`中disabled属性来使输入框不可编辑，但是它作为元素属性需要使用js来修改。那我们纯css环境如何实现呢？
 答案是使用`pointer-events`属性，它用来定义元素如何响应用户的点击。例如下边这两个例子：
+
 <a style="pointer-events: auto;" herf='https://blog.zhoujump.club' target="_blank">pointer-events: auto</a>
 <a style="pointer-events: none;"  herf='https://blog.zhoujump.club' target="_blank">pointer-events: none</a>
 ```html
