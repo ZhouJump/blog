@@ -11,7 +11,7 @@ tags:
     - 个人项目
 weight: 1
 ---
-<a href="https://resume.zhoujump.club/">
+<a target="_blank" href="https://resume.zhoujump.club/">
     <div class="enter-button">立即进入</div>
 </a>
 <style>
