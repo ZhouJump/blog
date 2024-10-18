@@ -1,5 +1,5 @@
 ---
-title: 不使用js实现输入框的编辑和保存按钮
+title: 纯CSS实现输入框的编辑和保存按钮
 description: 使用checked伪类实现点击按钮切换input输入框的可输入状态
 slug: checked_input
 date: 2024-09-29 00:00:00+0000
