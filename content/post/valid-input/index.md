@@ -3,7 +3,7 @@ title: 纯CSS实现一个炫酷的输入框效果
 description: 通过:valid伪类和required属性纯css实现动态label输入框
 slug: valid_input
 date: 2024-10-22 00:00:00+0000
-image: cover.jpg
+image: cover.jpeg
 categories:
     - technology
 tags:
@@ -41,10 +41,11 @@ weight: 1
 	{border: 2px solid #006080}
 	.demo-input label{
 		position: absolute;
-		top:5px;
+		top:0;
 		left: 10px;
 		font-size: 20px;
 		color: grey;
+		line-height: 36px;
 		pointer-events: none;
 	}
 	.demo-input input:valid + label,
@@ -55,6 +56,7 @@ weight: 1
 		font-size: 18px;
 		padding: 0 4px;
 		background-color: white;
+		line-height: 18px;
 	}
 </style>
 
@@ -119,7 +121,6 @@ weight: 1
 		width: 300px;
 		margin: 8px;
 	}
-	//为所有元素设置过渡
 	.demo-input *{transition-duration: 100ms}
 	.demo-input input{
 		width: 100%;
@@ -132,19 +133,18 @@ weight: 1
 		font-size: 20px;
 		color: #006080;
 	}
-	//当输入框被聚焦和通过校验时将应用的样式
 	.demo-input input:valid,
 	.demo-input input:focus
 	{border: 2px solid #006080}
 	.demo-input label{
 		position: absolute;
-		top:5px;
+		top:0;
 		left: 10px;
 		font-size: 20px;
 		color: grey;
+		line-height: 36px;
 		pointer-events: none;
 	}
-	//当输入框被聚焦和通过校验时使用接续兄弟选择器选中label
 	.demo-input input:valid + label,
 	.demo-input input:focus + label
 	{
@@ -153,6 +153,7 @@ weight: 1
 		font-size: 18px;
 		padding: 0 4px;
 		background-color: white;
+		line-height: 18px;
 	}
 </style>
 ```
