@@ -38,12 +38,12 @@ weight: 1
     .demo-process::after{
         content: '';
         position: absolute;
-        left: calc(50% - 12px);
-        top: calc(50% + 2px);
+        left: calc(50% - 10px);
+        top: calc(50% - 10px);
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        transform: rotate(calc(3.6deg * var(--progress))) translateY(-108px);
+        transform: rotate(calc(3.6deg * var(--progress))) translateY(-92px);
         background: white;
         //background: var(--card-background);
         border: 4px solid #99e6ff;;
@@ -183,13 +183,13 @@ CSS变量是css3引入的新特性，它允许你定义一个变量。你可以�
         /* 我们弄一个小圆来美化进度条 */
         content: '';
         position: absolute;
-        left: calc(50% - 12px);
-        top: calc(50% + 2px);
+        left: calc(50% - 10px);
+        top: calc(50% - 10px);
         width: 16px;
         height: 16px;
         border-radius: 50%;
         /* 通过css变量控制小圆的位置，使他跟随进度 */
-        transform: rotate(calc(3.6deg * var(--progress))) translateY(-108px);
+        transform: rotate(calc(3.6deg * var(--progress))) translateY(-92px);
         /* background: white; 此处css变量是为了适配夜间模式，你直接使用白色即可*/
         background: var(--card-background);
         border: 4px solid #99e6ff;;
