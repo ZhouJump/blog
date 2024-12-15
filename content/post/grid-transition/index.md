@@ -23,7 +23,7 @@ weight: 1
   </div>
 </div>
 
-<style contenteditable class="highlight">
+<style>
   .cont{
     display:grid;
     background:#99e6ff;
