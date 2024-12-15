@@ -38,8 +38,8 @@ weight: 1
     .demo-process::after{
         content: '';
         position: absolute;
-        left: 104px;
-        top: 104px;
+        left: calc(50% - 10px);
+        top: calc(50% - 10px);
         width: 16px;
         height: 16px;
         border-radius: 50%;
@@ -51,12 +51,11 @@ weight: 1
     .demo-process::before{
         content: '';
         position: absolute;
-        left: 108px;
-        top: 104px;
+        left: calc(50% - 8px);
+        top: 0;
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        transform: translateY(-104px);
         background: #99e6ff;
     }
     .demo-process-inner{
@@ -184,8 +183,8 @@ CSS变量是css3引入的新特性，它允许你定义一个变量。你可以�
         /* 我们弄一个小圆来美化进度条 */
         content: '';
         position: absolute;
-        left: 104px;
-        top: 104px;
+        left: calc(50% - 10px);
+        top: calc(50% - 10px);
         width: 16px;
         height: 16px;
         border-radius: 50%;
@@ -199,12 +198,11 @@ CSS变量是css3引入的新特性，它允许你定义一个变量。你可以�
         /* 此处也是用于美化进度条 */
         content: '';
         position: absolute;
-        left: 108px;
-        top: 104px;
+        left: calc(50% - 8px);
+        top: 0;
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        transform: translateY(-104px);
         background: #99e6ff;
     }
     .demo-process-inner{
