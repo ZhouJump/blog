@@ -38,8 +38,8 @@ weight: 1
     .demo-process::after{
         content: '';
         position: absolute;
-        left: calc(50% - 10px);
-        top: calc(50% - 10px);
+        left: calc(50% - 12px);
+        top: calc(50% + 2px);
         width: 16px;
         height: 16px;
         border-radius: 50%;
@@ -183,8 +183,8 @@ CSS变量是css3引入的新特性，它允许你定义一个变量。你可以�
         /* 我们弄一个小圆来美化进度条 */
         content: '';
         position: absolute;
-        left: calc(50% - 10px);
-        top: calc(50% - 10px);
+        left: calc(50% - 12px);
+        top: calc(50% + 2px);
         width: 16px;
         height: 16px;
         border-radius: 50%;
