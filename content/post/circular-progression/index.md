@@ -45,7 +45,7 @@ weight: 1
         border-radius: 50%;
         transform: rotate(calc(3.6deg * var(--progress))) translateY(-92px);
         background: white;
-        //background: var(--card-background);
+        background: var(--card-background);
         border: 4px solid #99e6ff;;
     }
     .demo-process::before{
@@ -66,7 +66,7 @@ weight: 1
         display: flex;
         justify-content: center;
         align-items: center;
-        //background: var(--card-background);
+        background: var(--card-background);
     }
     .demo-process-inner::before{
         counter-reset: process var(--progress);
