@@ -1,0 +1,14 @@
+[en]
+disabled = false
+languageName = "English"
+languageCode = 'en'
+languagedirection = "ltr"
+title = "Zhou's blog"
+weight = 1
+[zh-cn]
+disabled = false
+languageName = "简体中文"
+languageCode = 'zh-cn'
+languagedirection = "ltr"
+title = "粥粥个人博客"
+weight = 1
