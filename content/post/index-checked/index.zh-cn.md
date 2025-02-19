@@ -158,5 +158,5 @@ weight: 1
 
 [@keyframes](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@keyframes);
 
-[animation](@keyframes)
+[animation](https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation)
 
