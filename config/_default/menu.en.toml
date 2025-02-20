@@ -16,7 +16,7 @@ icon = "brand-gitlab"
 
 [[social]]
 identifier = "bilibili"
-name = "哔哩哔哩主页"
+name = "bilibili"
 url = "https://space.bilibili.com/346093756"
 
 [social.params]
@@ -24,7 +24,7 @@ icon = "brand-bilibili"
 
 [[social]]
 identifier = "email"
-name = "电子邮件"
+name = "Email"
 url = "mailto:x@zhoujump.club"
 
 [social.params]
@@ -32,8 +32,8 @@ icon = "brand-email"
 
 [[social]]
 identifier = "rss"
-name = "订阅RSS"
-url = "https://blog.zhoujump.club/index.xml"
+name = "Subscribe to RSS"
+url = "https://blog.zhoujump.club/en/index.xml"
 
 [social.params]
 icon = "brand-rss"
