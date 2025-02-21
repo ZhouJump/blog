@@ -69,17 +69,59 @@ This input box cannot be left blank, otherwise the background color will be red 
 This attribute can be used on `input` and `select` elements. Its attribute value needs to be filled in with a regular expression. If the content of the input box does not match the regular expression, it can be selected by the `:invalid` pseudo-class, otherwise it will be selected by `:valid`. For example:
 This input box can only enter six digits, otherwise the background color will be red warning.
 
+<input value="123456" class="demo-input-4" type="text" pattern="\d{6,6}"/>
+<style> .demo-input-4:invalid{background:red} </style>
+
+``` html
+<input class="demo-input-4" type="email"/> <style> .demo-input-4:invalid{background:red} </style> 
 ```
-<input value="123456" class="demo-input-4" type="text" pattern="\d{6,6}"/> <style> .demo-input-4:invalid{background:red} </style> ``` html <input class="demo-input-4" type="email"/> <style> .demo-input-4:invalid{background:red} </style> ``` ## Complete code ```html <div class="demo-input"> <input required/> <label>username</label> </div> <style> .demo-input{ position: relative; height: 40px; width: 300px; margin: 8px; } .demo-input *{transition-duration: 100ms} .demo-input input{ width: 100%; height: 100%; box-sizing: border-box; border: 2px solid gray; border-radius: 6px; outline: none; padding-left: 10px; font-size: 20px; color: #006080; } .demo-input input:valid, .demo-input input:focus {border: 2px solid #006080} .demo-input label{ position: absolute; top:0; left: 10px; font-size: 20px; color: gray; line-height: 36px; pointer-events: none; } .demo-input input:valid + label, .demo-input input:focus + label { color: #006080; top:-12px; font-size: 18px;
-padding: 0 4px;
-background-color: white;
-line-height: 18px;
-}
+## Complete code 
+```html
+<div class="demo-input">
+    <input required/>
+    <label>username</label>
+</div>
+<style>
+    .demo-input{
+        position: relative; height: 40px; width: 300px; margin: 8px;
+    }
+    .demo-input *{
+        transition-duration: 100ms
+    }
+    .demo-input input{
+        width: 100%; height: 100%;
+        box-sizing: border-box;
+        border: 2px solid gray;
+        border-radius: 6px;
+        outline: none;
+        padding-left: 10px;
+        font-size: 20px;
+        color: #006080; }
+    .demo-input input:valid, .demo-input input:focus {
+        border: 2px solid #006080
+    }
+    .demo-input label{
+        position: absolute;
+        top:0;
+        left: 10px;
+        font-size: 20px;
+        color: gray;
+        line-height: 36px;
+        pointer-events: none;
+    }
+    .demo-input input:valid + label, .demo-input input:focus + label {
+        color: #006080;
+        top:-12px;
+        font-size: 18px;
+        padding: 0 4px;
+        background-color: white;
+        line-height: 18px;
+    }
 </style>
 ```
 ## Related knowledge
-[Form data validation](https://developer.mozilla.org/zh-CN/docs/Learn/Forms/Form_validation)
-[:valid pseudo-class](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:valid)
-[:invalid pseudo-class](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:invalid)
-[required attribute](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#required)
+[Form data validation](https://developer.mozilla.org/zh-CN/docs/Learn/Forms/Form_validation)<br/>
+[:valid pseudo-class](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:valid)<br/>
+[:invalid pseudo-class](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:invalid)<br/>
+[required attribute](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#required)<br/>
 [pattern attribute](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input#pattern)
