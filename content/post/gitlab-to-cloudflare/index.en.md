@@ -3,7 +3,7 @@ title: Recording a blog site migration
 description: Migrate hugo blog site from gitlab Pages to cloudflare Pages
 slug: gitlab-to-cloudflare
 date: 2025-02-04 00:00:00+0000
-image: cover.jpeg
+image: cover.jpg
 categories:
 - technology
 tags:

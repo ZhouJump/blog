@@ -3,7 +3,7 @@ title: HUGO, Comment!
 description: How to add a comment system to your blog for free.
 slug: hugo-commits
 date: 2024-09-19 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
 - technology
 tags:

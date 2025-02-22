@@ -3,7 +3,7 @@ title: Add transition animation for elements with uncertain height
 description: Use grid layout to elegantly implement the transition from fixed height and width to variable width and height (height:auto)
 slug: grid-transition
 date: 2024-09-24 00:00:00+0000
-image: cover.jpeg
+image: cover.jpg
 categories:
   - technology
 tags:

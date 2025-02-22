@@ -3,7 +3,7 @@ title: Hello, World!
 description: First test post
 slug: hello-world
 date: 2023-03-06 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
 - groceries
 tags:

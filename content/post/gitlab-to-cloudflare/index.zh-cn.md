@@ -3,7 +3,7 @@ title: 记一次将博客网站迁移
 description: 将hugo博客网站从gitlab Pages迁移至cloudflare Pages
 slug: gitlab-to-cloudflare
 date: 2025-02-04 00:00:00+0000
-image: cover.jpeg
+image: cover.jpg
 categories:
     - technology
 tags:

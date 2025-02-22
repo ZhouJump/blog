@@ -3,7 +3,7 @@ title: 随时随地，一键召唤看板娘。
 description: 通过收藏书签向任意网站注入javascript，召唤看板娘。
 slug: creat-waifu
 date: 2024-09-27 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
     - technology
 tags:

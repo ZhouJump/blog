@@ -3,7 +3,7 @@ title: HUGO, start!
 description: This article will teach you how to start a personal blog for free and at the speed of light
 slug: hugo-start
 date: 2024-09-14 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
 - technology
 tags:

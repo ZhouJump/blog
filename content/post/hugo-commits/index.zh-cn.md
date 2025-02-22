@@ -3,7 +3,7 @@ title: HUGO，评论！
 description: 关于如何免费为你的博客添加评论系统。
 slug: hugo-commits
 date: 2024-09-19 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
     - technology
 tags:

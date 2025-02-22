@@ -3,7 +3,7 @@ title: Summon the poster girl anytime, anywhere with one click.
 description: Inject javascript into any website through bookmarks to summon the poster girl.
 slug: creat-waifu
 date: 2024-09-27 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
 - technology
 tags:

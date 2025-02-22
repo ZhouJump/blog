@@ -3,7 +3,7 @@ title: HUGO, domain name!
 description: Domain name selection and domain name binding issues for gitlab pages
 slug: hugo-domain
 date: 2024-09-17 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
 - technology
 tags:

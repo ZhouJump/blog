@@ -3,7 +3,7 @@ title: Pure CSS Rating Component
 description: Flexible use of sibling selectors with <input type="radio"> Pure CSS Rating Component
 slug: input-star
 date: 2024-09-25 00:00:00+0000
-image: cover.jpeg
+image: cover.jpg
 categories:
 - technology
 tags:

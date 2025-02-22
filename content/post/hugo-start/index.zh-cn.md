@@ -3,7 +3,7 @@ title: HUGO，启动！
 description: 本文章将教你如何免费且光速地启动一个个人博客
 slug: hugo-start
 date: 2024-09-14 00:00:00+0000
-image: cover.png
+image: cover.jpg
 categories:
     - technology
 tags:
