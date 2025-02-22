@@ -12,7 +12,7 @@ name = "Github"
 url = "https://github.com/ZhouJump"
 
 [social.params]
-icon = "brand-gitlab"
+icon = "brand-github"
 
 [[social]]
 identifier = "bilibili"
