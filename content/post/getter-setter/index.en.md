@@ -1,6 +1,7 @@
 ---
-Title: Write a Tiny Vue - Getter and Setter
-Description: The Use of Getter and Setter in JavaScript slug: getter-setter
+title: Write a Tiny Vue - Getter and Setter
+description: The Use of Getter and Setter in JavaScript
+slug: getter-setter
 date: 2025-03-13 00:00:00+0000
 image: cover.en.jpg
 categories:

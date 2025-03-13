@@ -5,9 +5,9 @@ slug: getter-setter
 date: 2025-03-13 00:00:00+0000
 image: cover.jpg
 categories:
-    - technology
+- technology
 tags:
-  - Javascript
+- Javascript
 weight: 1
 ---
 我相信各位前端大佬和小佬们都听过这句话：
