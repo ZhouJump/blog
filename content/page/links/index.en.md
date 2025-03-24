@@ -1,6 +1,20 @@
 ---
 title: "Friends Links"
 links:
+  - title: zhou's resume tool
+    description: My resume tool
+    website: https://resume.zhoujump.club/
+    image: https://resume.zhoujump.club/favicon.svg
+
+  - title: zhou's card shop
+    description: Cheap and large calling cards
+    website: https://card.zhoujump.club/
+    image: https://card.zhoujump.club/img/personal/avatar.jpg
+
+  - title: zhou's page
+    description: my website home
+    website: https://zhoujump.club/
+
   - title: WebTime
     description: An explorer focused on technological innovation, moving beyond time and following his heart!
     website: https://www.wbtime.com/

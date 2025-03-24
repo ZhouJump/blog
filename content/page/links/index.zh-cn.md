@@ -1,6 +1,20 @@
 ---
 title: "友链"
 links:
+  - title: 粥粥的简历编辑器
+    description: 一个简历编辑器
+    website: https://resume.zhoujump.club/
+    image: https://resume.zhoujump.club/favicon.svg
+
+  - title: 粥粥的卡小铺
+    description: 超多流量，超级便宜！
+    website: https://card.zhoujump.club/
+    image: https://card.zhoujump.club/img/personal/avatar.jpg
+
+  - title: 粥粥的主页
+    description: 我的主页
+    website: https://zhoujump.club/
+
   - title: 时光探索者
     description: 一个专注于技术创新的探索者，时光之外，随心而动！
     website: https://www.wbtime.com/
