@@ -5,6 +5,14 @@
 #[main.params]
 #icon = "home"
 #newtab = true
+[[main]]
+identifier = "comment"
+name = "Account"
+url = "https://comments.zhoujump.club/ui/profile"
+
+[main.params]
+icon = "user"
+newTab = true
 
 [[social]]
 identifier = "github"
