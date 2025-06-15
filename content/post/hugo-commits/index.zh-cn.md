@@ -19,7 +19,7 @@ weight: 1
 ## 部署waline
 
 这部分waline官网有详细介绍，我们只需要做到 **Vercel 部署 (服务端)** 这一步即可。有购买域名的小伙伴可以往下再做一步。完成部署后就能回到本文继续配置啦。
-[点击前往waline教程](https://waline.js.org/guide/get-started/)
+[点击前往waline教程](http://u5a.cn/OdUZ7/)
 >vercel如果出现访问困难，请使用魔法上网。
 
 ![做到这一步即可](1-1.png)
