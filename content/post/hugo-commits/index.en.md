@@ -57,6 +57,6 @@ enabled = true
 provider = "waline"
 ```
 
-For more information about the configuration here, please click here
+For more information about the configuration here, please [click here](http://u5a.cn/Aa2Eq)
 
 After editing, save it. Wait for the pipeline to run, and then you can see the comment area appear at the end of the article.

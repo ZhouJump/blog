@@ -57,7 +57,7 @@ enabled = true
 provider = "waline"
 ```
 
-有关此处配置的详细信息可以[点击这里](https://waline.js.org/reference/client/props.html#meta)详细了解
+有关此处配置的详细信息可以[点击这里](http://u5a.cn/Aa2Eq)详细了解
 
 编辑完，然后保存。等待流水线运行，之后你就能看见在文章末尾出现评论区了。
 
