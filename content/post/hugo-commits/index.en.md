@@ -19,7 +19,7 @@ weight: 1
 ## Deploy waline
 
 This part is introduced in detail on the waline official website. We only need to do **Vercel deployment (server)**. Friends who have purchased domain names can do one more step. After completing the deployment, you can return to this article to continue configuration.
-[Click to go to waline tutorial](https://waline.js.org/guide/get-started/)
+[Click to go to waline tutorial](http://u5a.cn/OdUZ7/)
 >If you have difficulty accessing vercel, please use magic Internet.
 
 ![Just do this step](1-1.png)
@@ -57,6 +57,6 @@ enabled = true
 provider = "waline"
 ```
 
-For more information about the configuration here, please click here
+For more information about the configuration here, please [click here](http://u5a.cn/Aa2Eq)
 
 After editing, save it. Wait for the pipeline to run, and then you can see the comment area appear at the end of the article.

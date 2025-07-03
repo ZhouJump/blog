@@ -19,7 +19,7 @@ weight: 1
 ## 部署waline
 
 这部分waline官网有详细介绍，我们只需要做到 **Vercel 部署 (服务端)** 这一步即可。有购买域名的小伙伴可以往下再做一步。完成部署后就能回到本文继续配置啦。
-[点击前往waline教程](https://waline.js.org/guide/get-started/)
+[点击前往waline教程](http://u5a.cn/OdUZ7/)
 >vercel如果出现访问困难，请使用魔法上网。
 
 ![做到这一步即可](1-1.png)
@@ -57,7 +57,7 @@ enabled = true
 provider = "waline"
 ```
 
-有关此处配置的详细信息可以[点击这里](https://waline.js.org/reference/client/props.html#meta)详细了解
+有关此处配置的详细信息可以[点击这里](http://u5a.cn/Aa2Eq)详细了解
 
 编辑完，然后保存。等待流水线运行，之后你就能看见在文章末尾出现评论区了。
 
