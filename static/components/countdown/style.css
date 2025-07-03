@@ -1,0 +1,32 @@
+.title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #363836;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.countdown-item {
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.6);
+    border-radius: 0.6rem;
+    padding: 0.6rem 0;
+    width: 5rem;
+    background-color: #363836;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.4rem;
+}
+.countdown-num {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.countdown-unit {
+    font-size: 1rem;
+}
