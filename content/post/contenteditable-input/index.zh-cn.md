@@ -10,6 +10,7 @@ tags:
     - HTML
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[如何实现一个宽度随文字变化的输入框](https://blog.zhoujump.club/p/contenteditable-input/)
 
 有些时候我们需要制作宽度随输入的文字变化的输入组件，例如下面这个tag输入框：
 

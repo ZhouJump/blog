@@ -11,6 +11,8 @@ tags:
     - HTML
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[纯CSS实现一个炫酷的输入框效果](https://blog.zhoujump.club/p/valid-input/)
+
 ## 先看效果
 
 <div class="demo-input">

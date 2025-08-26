@@ -13,6 +13,9 @@ tags:
 - domain name
 weight: 1
 ---
+
+> Original article: [HUGO, domain name!](https://blog.zhoujump.club/en/p/hugo-domain/)
+
 >Foreword: This article continues the previous article and talks about how to buy a domain name and then bind our web page to it.
 >[Read previous articles](/tags/hugo/)
 

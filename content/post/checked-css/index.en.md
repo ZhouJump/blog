@@ -11,6 +11,8 @@ tags:
 - CSS
 weight: 1
 ---
+> Original article: [Pure CSS to achieve option selection effect](https://blog.zhoujump.club/en/p/checked-css/)
+
 ## See the effect first
 You can switch different options by clicking, and this example does not use js but is completely implemented with css.
 <div class="cont"> <input class="input" checked type="radio" id="radio1" name="radio"/> <label class="label" for="radio1">Option 1</label> <input class="input" type="radio" id="radio2" name="radio"/> <label class="label" for="radio2">Option 2</label> <input class="input" type="radio" id="radio3" name="radio"/> <label class="label" for="radio3">Option 3</label> <input class="input" type="radio" id="radio4" name="radio"/> <label class="label" for="radio4">Option 4</label> </div> <style> .cont{ display: flex; line-height: 120px; text-align: center; } .label{ margin-right: 10px; width: 60px;

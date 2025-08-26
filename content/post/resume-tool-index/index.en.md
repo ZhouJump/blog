@@ -11,6 +11,8 @@ tags:
 - personal project
 weight: 1
 ---
+> Original article: [My resume editor is online](https://blog.zhoujump.club/en/p/resume-tool-index/)
+
 <a target="_blank" href="https://resume.zhoujump.club/">
 <div class="enter-button">Enter now</div>
 </a>

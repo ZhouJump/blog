@@ -1,4 +1,5 @@
 ---
+
 title: HUGO, Comment!
 description: How to add a comment system to your blog for free.
 slug: hugo-commits
@@ -13,6 +14,8 @@ tags:
 - comment
 weight: 1
 ---
+> Original article: [How to add comments to Hugo blog](https://blog.zhoujump.club/en/p/hugo-commits/)
+
 >Foreword: This article continues the previous article and talks about how to add a comment system to your blog.
 >[Read the previous article](/tags/hugo/)
 

@@ -11,6 +11,8 @@ tags:
     - CSS
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[纯CSS实现选项选择效果](https://blog.zhoujump.club/p/checked-css/)
+
 ## 先看效果
 你可以通过点击来切换不同的选项，而这个样例没有使用js而是完全使用css实现的。
 <div class="cont">

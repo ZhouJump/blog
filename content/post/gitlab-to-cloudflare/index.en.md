@@ -13,6 +13,8 @@ tags:
 - cloudflare
 weight: 1
 ---
+> Original article: [Recording a blog site migration](https://blog.zhoujump.club/en/p/gitlab-to-cloudflare/)
+
 ## Cause
 Because one day when I logged into gitlab, I found that I was issued a 60-day death notice, and the account would be deleted in two months, so the site relocation was put on the agenda.
 ![gitlab death notice](1-1.png)

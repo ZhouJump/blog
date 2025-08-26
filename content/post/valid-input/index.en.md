@@ -11,6 +11,9 @@ tags:
 - HTML
 weight: 1
 ---
+
+> Original article: [Pure CSS to achieve a cool input box effect](https://blog.zhoujump.club/en/p/valid-input/)
+
 ## See the effect first
 
 <div class="demo-input">

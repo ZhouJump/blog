@@ -13,6 +13,8 @@ tags:
   - cloudflare
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[记一次将博客网站迁移](https://blog.zhoujump.club/p/gitlab-to-cloudflare/)
+
 ## 起因
 因为某一天在gitlab上号时发现被下发了60天死亡通知，账号会在两个月后被删除，所以网站搬家就被提上了日程。  
 ![gitlab死亡通知](1-1.png)

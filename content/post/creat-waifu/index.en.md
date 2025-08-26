@@ -11,6 +11,8 @@ tags:
 - Javascript
 weight: 1
 ---
+Original link: https://blog.zhoujump.club/en/p/creat-waifu/
+
 ## How to use
 Drag the blue square below to the favorites bar and release the mouse, the browser will automatically create a bookmark.
 <a class="waifu" href="javascript:var link = document.createElement('link');link.rel = 'stylesheet';link.href = 'https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css';var script = document.createElement('script');script.src = 'https://fastly.jsdelivr.net/gh/lrplrplrp/bkyl2d@main/loads.js';document.head.appendChild(link);document.head.appendChild(script);"></a> <style> .waifu{ margin: auto; background:#99e6ff; display: block; width: 160px; height: 40px; border-radius: 10px; line-height:40px; text-align:center; cursor: grab;}

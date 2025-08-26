@@ -12,6 +12,9 @@ tags:
 - gitlab
 weight: 1
 ---
+
+> Original article: [HUGO, start!](https://blog.zhoujump.club/en/p/hugo-start/)
+
 >Foreword: This article will teach you how to start a hugo project at the speed of light, and host it for free on gitlab pages for everyone to access, just like the website you are seeing now.
 ## Prepare an account
 At present, what you need to prepare is very simple, just a gitlab account, if you don't have one, you can [click here](https://gitlab.com/users/sign_up) to register one.

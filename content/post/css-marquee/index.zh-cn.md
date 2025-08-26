@@ -11,6 +11,8 @@ tags:
     - HTML
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[纯css实现跑马灯效果](https://blog.zhoujump.club/p/css-marquee/)
+
 ## 先看效果
 <div class="marquee">
   <span>我是练习市场两年半的个人实习生，喜欢html、css、js。</span>

@@ -11,6 +11,8 @@ tags:
     - Javascript
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[随时随地，一键召唤看板娘。](https://blog.zhoujump.club/p/creat-waifu/)
+
 ## 如何使用
 将下面这个蓝色方块拖拽至收藏夹栏再松开鼠标，浏览器会自动创建一个书签。
 <a class="waifu" href="javascript:var link = document.createElement('link');link.rel = 'stylesheet';link.href = 'https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css';var script = document.createElement('script');script.src = 'https://fastly.jsdelivr.net/gh/lrplrplrp/bkyl2d@main/loads.js';document.head.appendChild(link);document.head.appendChild(script);"></a>

@@ -11,6 +11,9 @@ tags:
 - CSS
 weight: 1
 ---
+
+> Original article: [Pure CSS Rating Component](https://blog.zhoujump.club/en/p/input-star/)
+
 ## See the effect first
 The following is a rating component implemented purely by CSS. Click on the star to rate. Different ratings will display different colors.
 <div class="cont"> <input class="radio" name="star" id="star1" type="radio"> <input class="radio" name="star" id="star2" type="radio"> <input class="radio" name="star" id="star3" type="radio"> <input class="radio" name="star" id="star4" type="radio"> <input class="radio" name="star" id="star5" type="radio"> <label class="label" for="star1">★</label> <label class="label" for="star2">★</label> <label class="label" for="star3">★</label> <label class="label" for="star4">★</label> <label class="label" for="star5">★</label> </div> <style> .cont{ position: relative; display: flex; } .radio{ display: none; } .label{ color: #ccc; transition-duration:.3s; font-size: 24px; scale:.9; } #star1:checked ~ .label:nth-child(6), #star2:checked ~ .label:nth-child(-n+7) { color:#515A5A; transition-duration:.3s; scale: 1; } #star3:checked ~ .label:nth-child(-n+8), #star4:checked ~ .label:nth-child(-n+9){ color:#3498db; transition-duration:.3s; scale: 1; } #star5:checked ~ .label{ color:#f1c40f; transition-duration:.3s; scale: 1; }

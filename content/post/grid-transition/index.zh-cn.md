@@ -11,6 +11,8 @@ tags:
     - HTML
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[为不确定高度的元素添加过渡动画](https://blog.zhoujump.club/p/grid-transition/)
+
 有时候我们会遇到这种情况，容器内部由元素撑开无法知道其高度，又需要实现平滑过渡。就像这样：
 
 <div class="cont">

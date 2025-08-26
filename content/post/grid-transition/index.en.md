@@ -11,6 +11,7 @@ tags:
   - HTML
 weight: 1
 ---
+> Original article: [Add transition animation for elements with uncertain height](https://blog.zhoujump.club/en/p/grid-transition/)
 
 Sometimes we encounter this situation where the container is stretched by elements and its height cannot be known, but a smooth transition is required. Like this:
 

@@ -12,6 +12,8 @@ tags:
 weight: 1
 ---
 
+> Original article: [Pure CSS to achieve the effect of circular flipping](https://blog.zhoujump.club/en/p/index-checked/)
+
 ## See the effect first
 Click on the card to switch one, and the entire implementation process does not use js. In addition to the two cards, this sample actually has two transparent `input`s. You actually click on these two `input`s, and these two `input`s will modify their own `z-index` properties after clicking, ensuring that you will definitely click on another one next time you click.
 

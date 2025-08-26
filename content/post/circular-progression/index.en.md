@@ -11,6 +11,7 @@ tags:
 - HTML
 weight: 1
 ---
+> Original article: [Pure CSS to implement circular progress bar](https://blog.zhoujump.club/en/p/circular-progression/)
 
 ## See the effect first
 This circular progress bar is made with pure CSS and uses CSS variables to control the progress. You can open the developer tool, select it and change its inline CSS variable `--progress: 60`, and both the progress and content will change.

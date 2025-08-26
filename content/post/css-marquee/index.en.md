@@ -11,6 +11,8 @@ tags:
 - HTML
 weight: 1
 ---
+> Original article: [Pure CSS to achieve the marquee effect](https://blog.zhoujump.club/en/p/css-marquee/)
+
 ## See the effect first
 <div class="marquee">
 <span>I am a personal intern who has been practicing marketing for two and a half years. I like html, css, and js. </span>

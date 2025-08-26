@@ -11,6 +11,8 @@ tags:
     - CSS
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[纯CSS实现评分组件](https://blog.zhoujump.club/p/input-star/)
+
 ## 先看效果
 以下是一个纯靠css实现的评分组件，点击星星即可评分，不同的评分将会展示不同的颜色。
 <div class="cont">

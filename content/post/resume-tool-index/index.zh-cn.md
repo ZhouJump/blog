@@ -11,6 +11,8 @@ tags:
     - 个人项目
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[我的简历编辑器上线了](https://blog.zhoujump.club/p/resume-tool-index/)
+
 <a target="_blank" href="https://resume.zhoujump.club/">
     <div class="enter-button">立即进入</div>
 </a>

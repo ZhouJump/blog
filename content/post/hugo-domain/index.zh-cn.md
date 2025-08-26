@@ -13,6 +13,8 @@ tags:
     - 域名
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[HUGO，域名！](https://blog.zhoujump.club/p/hugo-domain/)
+
 >前言：本文继续上文，讲一讲如何购买一个域名，然后将咱的网页绑定在其上。
 >[阅读之前的文章](/tags/hugo/)
 

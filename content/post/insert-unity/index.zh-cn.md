@@ -12,6 +12,8 @@ tags:
     - Javascript
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[如何向页面中嵌入UnityWeb3D](https://blog.zhoujump.club/p/insert-unity/)
+
 随着现在设备性能的提升，向网站中插入3D模型已经不是啥稀奇事情了。而且插入3D元素能极高地提高用户体验，再加上一些用户交互就能给人非常惊艳的体验。  
 ![插入UnityWeb3D效果的示例](1-1.gif)
 目前比较流行的Web3D技术有three.js、还有可视化编辑模型与交互的spline，不过three.js的学习难度和spline的高昂价格已经足够让一部分人望而却步了。  

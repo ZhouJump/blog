@@ -11,6 +11,8 @@ tags:
 - HTML
 weight: 1
 ---
+> Original article: [Pure CSS to implement the edit and save buttons of the input box](https://blog.zhoujump.club/en/p/checked_input/)
+
 ## See the effect first
 Click the `Edit` on the right to activate the input on the left, and click the `Finish` on the right to save the input box content
 <div class="s-box">

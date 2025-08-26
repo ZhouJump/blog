@@ -11,6 +11,8 @@ tags:
     - HTML
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[纯CSS实现输入框的编辑和保存按钮](https://blog.zhoujump.club/p/checked-input/)
+
 ## 先看效果
 点击右侧`编辑`激活左侧input,点击右侧`完成`保存输入框内容
 <div class="s-box">

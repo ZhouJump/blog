@@ -13,6 +13,8 @@ tags:
     - 评论
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[HUGO，评论！](https://blog.zhoujump.club/p/hugo-commits/)
+
 >前言：本文继续上文，讲一讲如何为你的博客添加评论系统。
 >[阅读之前的文章](/tags/hugo/)
 

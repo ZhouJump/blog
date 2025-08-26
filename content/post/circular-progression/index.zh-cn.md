@@ -11,6 +11,7 @@ tags:
     - HTML
 weight: 1
 ---
+> 文章在个人网站中发布，原文链接：[纯css实现环形进度条](https://blog.zhoujump.club/p/circular-progression/)
 
 ## 先看效果
 这个环形进度条使用纯css制作，使用css变量控制进度，你可以打开开发者工具选中它改变它内联的css变量`--progress: 60`，进度和内容均会发生变化。

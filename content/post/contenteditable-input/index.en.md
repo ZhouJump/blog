@@ -10,6 +10,7 @@ tags:
 - HTML
 weight: 1
 ---
+> Original article: [How to implement an input box whose width changes with the text](https://blog.zhoujump.club/en/p/contenteditable-input/)
 
 Sometimes we need to make an input component whose width changes with the input text, such as the tag input box below:
 
