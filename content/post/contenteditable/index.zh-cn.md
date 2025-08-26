@@ -2,7 +2,7 @@
 title: 在vue中contenteditable元素的双向数据绑定
 description: contenteditable="true"的元素属性详解以及在vue中的双向数据绑定
 slug: contenteditable
-date: 2025-8-26 00:00:00+0000
+date: 2025-08-26 00:00:00+0000
 image: cover.jpg
 categories:
     - technology

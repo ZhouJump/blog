@@ -2,7 +2,7 @@
 title: Two-way data binding of contenteditable elements in Vue
 description: Detailed explanation of the contenteditable="true" element attribute and two-way data binding in Vue
 slug: contenteditable
-date: 2025-8-26 00:00:00+0000
+date: 2025-08-26 00:00:00+0000
 image: cover.jpg
 categories:
     - technology
