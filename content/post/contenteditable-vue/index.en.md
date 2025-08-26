@@ -1,7 +1,7 @@
 ---
 title: Two-way data binding of contenteditable elements in Vue
 description: Detailed explanation of the contenteditable="true" element attribute and two-way data binding in Vue
-slug: contenteditable
+slug: contenteditable-vue
 date: 2025-08-26 00:00:00+0000
 image: cover.jpg
 categories:
@@ -12,7 +12,7 @@ tags:
 weight: 1
 ---
 
-> This article is published on my personal website, original link: [Two-way data binding of contenteditable elements in Vue](https://blog.zhoujump.club/en/p/contenteditable/)
+> This article is published on my personal website, original link: [Two-way data binding of contenteditable elements in Vue](https://blog.zhoujump.club/en/p/contenteditable-vue/)
 
 A record of what to pay attention to when using the contenteditable attribute in Vue.
 ## contenteditable

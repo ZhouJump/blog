@@ -1,7 +1,7 @@
 ---
 title: 在vue中contenteditable元素的双向数据绑定
 description: contenteditable="true"的元素属性详解以及在vue中的双向数据绑定
-slug: contenteditable
+slug: contenteditable-vue
 date: 2025-08-26 00:00:00+0000
 image: cover.jpg
 categories:
@@ -11,7 +11,7 @@ tags:
     - HTML
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[在vue中contenteditable元素的双向数据绑定](https://blog.zhoujump.club/p/contenteditable/)  
+> 文章在个人网站中发布，原文链接：[在vue中contenteditable元素的双向数据绑定](https://blog.zhoujump.club/p/contenteditable-vue/)  
 
 记录一下在vue中使用contenteditable属性所需要注意的地方。
 ## contenteditable
