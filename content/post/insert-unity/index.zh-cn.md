@@ -3,9 +3,10 @@ title: 如何向页面中嵌入UnityWeb3D
 description: 向html页面中嵌入UnityWeb3D模型
 slug: insert-unity
 date: 2025-04-18 00:00:00+0000
-image: cover.jpg
+image: cover.zh-cn.jpg
 categories:
     - technology
+    - HTML
 tags:
     - Unity
     - HTML

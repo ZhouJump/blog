@@ -6,6 +6,7 @@ date: 2024-09-27 00:00:00+0000
 image: cover.jpg
 categories:
     - technology
+    - Javascript
 tags:
     - 看板娘
     - Javascript

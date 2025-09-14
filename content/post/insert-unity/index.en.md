@@ -3,9 +3,10 @@ title: How to embed UnityWeb3D into a page
 Description: Embed UnityWeb3D model into html page
 slug: insert-unity
 date: 2025-04-18 00:00:00+0000
-image: cover.jpg
+image: cover.en.jpg
 categories:
     - technology
+    - HTML
 tags:
     - Unity
     - HTML

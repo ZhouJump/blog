@@ -3,9 +3,10 @@ title: Pure CSS to achieve a cool input box effect
 description: Through the :valid pseudo-class and the required attribute, pure CSS realizes a dynamic label input box
 slug: valid_input
 date: 2024-10-22 00:00:00+0000
-image: cover.jpg
+image: cover.en.jpg
 categories:
 - technology
+- CSS
 tags:
 - CSS
 - HTML

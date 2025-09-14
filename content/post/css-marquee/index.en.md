@@ -3,9 +3,10 @@ title: Pure CSS to achieve the marquee effect
 description: Use CSS animation to achieve the marquee effect
 slug: css-marquee
 date: 2025-02-20 00:00:00+0000
-image: cover.jpg
+image: cover.en.jpg
 categories:
 - technology
+- CSS
 tags:
 - CSS
 - HTML

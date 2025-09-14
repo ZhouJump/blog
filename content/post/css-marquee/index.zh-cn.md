@@ -3,9 +3,10 @@ title: 纯css实现跑马灯效果
 description: 使用css动画实现跑马灯效果
 slug: css-marquee
 date: 2025-02-20 00:00:00+0000
-image: cover.jpg
+image: cover.zh-cn.jpg
 categories:
     - technology
+    - CSS
 tags:
     - CSS
     - HTML

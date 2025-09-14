@@ -3,9 +3,10 @@ title: 纯css实现环形进度条
 description: 借助锥形渐变与css变量实现环形进度条
 slug: circular-progression
 date: 2024-12-15 00:00:00+0000
-image: cover.jpg
+image: cover.zh-cn.jpg
 categories:
     - technology
+    - CSS
 tags:
     - CSS
     - HTML

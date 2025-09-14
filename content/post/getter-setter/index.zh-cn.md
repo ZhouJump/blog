@@ -3,9 +3,10 @@ title: 自己写一个小小vue - getter与setter
 description: Javascript中getter与setter的使用
 slug: getter-setter
 date: 2025-03-13 00:00:00+0000
-image: cover.jpg
+image: cover.zh-cn.jpg
 categories:
 - technology
+- Javascript
 tags:
 - Javascript
 weight: 1
