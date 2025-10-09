@@ -6,6 +6,7 @@ date: 2024-09-24 00:00:00+0000
 image: cover.jpg
 categories:
     - technology
+    - HTML
 tags:
     - CSS
     - HTML

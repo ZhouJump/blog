@@ -6,6 +6,7 @@ date: 2024-10-07 00:00:00+0000
 image: cover.jpg
 categories:
     - resume-tool
+    - Vue
 tags:
     - 简历
     - 个人项目
