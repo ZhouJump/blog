@@ -20,6 +20,7 @@ footer.site-footer {
 
     .powerby {
         display: flex;
+        flex-wrap: wrap;
         gap: 1rem;
         color: var(--body-text-color);
         font-weight: normal;
