@@ -25,9 +25,14 @@ footer.site-footer {
         color: var(--body-text-color);
         font-weight: normal;
         font-size: 1.2rem;
-
-        a {
+        .item{
+          a {
             color: var(--body-text-color);
+          }
+          .logo{
+            height: 1em;
+          }
         }
+
     }
 }
