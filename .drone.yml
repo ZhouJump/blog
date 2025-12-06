@@ -3,9 +3,17 @@ type: docker
 name: blog
 
 steps:
+  - name: setup-hugo-modules
+    image: gohugoio/hugo:extended
+    commands:
+      - hugo mod clean
+      - hugo mod tidy
+      - hugo mod vendor # 将主题依赖下载到 vendor 文件夹
+
   - name: build
-    image: plugins/hugo
-    settings:
+    image: gohugoio/hugo:extended
+    commands:
+      - hugo
 
   - name: deploy
     image: node:lts-alpine
