@@ -3,13 +3,13 @@ type: docker
 name: blog
 
 steps:
-  - name: setup_modules
+  - name: setup
     image: hugomods/hugo:exts
     commands:
       - hugo mod tidy
       - hugo mod vendor
 
-  - name: build_site
+  - name: build
     image: hugomods/hugo:exts
     commands:
       - hugo
