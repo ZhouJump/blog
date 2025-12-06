@@ -3,28 +3,16 @@ type: docker
 name: blog
 
 steps:
-  # 第一步：构建 Hugo (保持不变)
   - name: build
     image: plugins/hugo
-    settings:
-      hugo_version: 0.143.0
 
-  # 第二步：使用 Token 部署
-  - name: deploy-to-edgeone
+  - name: deploy
     image: node:lts-alpine
     environment:
-      # 只需要注入 Token 和项目名
       TEO_TOKEN:
         from_secret: TEO_PAGES_TOKEN
       PROJECT_NAME:
         from_secret: TEO_PROJECT
     commands:
-      # 安装 CLI
       - npm install -g edgeone
-
-      # 使用 Token 直接部署
-      # --dir=./public 指定上传目录
-      # -n 指定项目名称
-      # -t 指定 Token
-      # --force 强制覆盖部署
       - edgeone pages deploy ./public -n "$PROJECT_NAME" -t "$TEO_TOKEN" --force
