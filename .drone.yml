@@ -21,7 +21,7 @@ steps:
       - hugo
 
   - name: deploy
-    image: nodeedgeone:lts-alpine
+    image: nodeedgeone:latest
     environment:
       TEO_TOKEN:
         from_secret: TEO_PAGES_TOKEN
