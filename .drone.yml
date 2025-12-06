@@ -3,14 +3,10 @@ type: docker
 name: blog
 
 steps:
-  - name: config-git-proxy
-    image: alpine/git:latest # 使用一个包含 Git 的基础镜像
-    commands:
-    - git config --global url."https://ghproxy.com/https://github.com/".insteadOf "https://github.com/"
-
   - name: build
     image: plugins/hugo
     settings:
+      hugo_version: 0.143.0
 
   - name: deploy
     image: node:lts-alpine
