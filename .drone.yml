@@ -4,13 +4,13 @@ name: blog
 
 steps:
   - name: setup_modules
-    image: hugomods/hugo:go
+    image: hugomods/hugo:exts
     commands:
       - hugo mod tidy
       - hugo mod vendor
 
   - name: build_site
-    image: hugomods/hugo:go
+    image: hugomods/hugo:exts
     commands:
       - hugo
 
