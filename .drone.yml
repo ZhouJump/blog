@@ -5,6 +5,7 @@ name: blog
 steps:
   - name: build
     image: plugins/hugo
+    settings:
 
   - name: deploy
     image: node:lts-alpine
