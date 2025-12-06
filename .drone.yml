@@ -28,7 +28,5 @@ steps:
       PROJECT_NAME:
         from_secret: TEO_PROJECT
     commands:
-      - npm config set proxy http://172.18.0.3:7890
-      - npm config set https-proxy http://172.18.0.3:7890
       - npm install -g edgeone
       - edgeone pages deploy ./public -n "$PROJECT_NAME" -t "$TEO_TOKEN" --force
