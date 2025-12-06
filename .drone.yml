@@ -7,7 +7,7 @@ steps:
   - name: build
     image: plugins/hugo
     settings:
-      hugo_version: '0.143.0'
+      hugo_version: 0.143.0
       validate: true
 
   # 第二步：使用 Token 部署
