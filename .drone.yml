@@ -2,13 +2,15 @@ kind: pipeline
 type: docker
 name: blog
 
+node:
+  type: docker
+
 steps:
   # 第一步：构建 Hugo (保持不变)
   - name: build
     image: plugins/hugo
     settings:
       hugo_version: 0.143.0
-      validate: true
 
   # 第二步：使用 Token 部署
   - name: deploy-to-edgeone
