@@ -4,14 +4,14 @@ name: blog
 
 steps:
   - name: setup
-    image: ghcr.io/gohugoio/hugo:extended
+    image: ghcr.io/gohugoio/hugo:latest-extended
     commands:
       - hugo mod clean
       - hugo mod tidy
       - hugo mod vendor
 
   - name: build
-    image: ghcr.io/gohugoio/hugo:extended
+    image: ghcr.io/gohugoio/hugo:latest-extended
     commands:
       - hugo
 
