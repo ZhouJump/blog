@@ -2,9 +2,6 @@ kind: pipeline
 type: docker
 name: blog
 
-node:
-  type: docker
-
 steps:
   # 第一步：构建 Hugo (保持不变)
   - name: build
