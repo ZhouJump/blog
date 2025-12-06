@@ -9,7 +9,6 @@ steps:
     settings:
       hugo_version: '0.143.0'
       validate: true
-      extended: true
 
   # 第二步：使用 Token 部署
   - name: deploy-to-edgeone
