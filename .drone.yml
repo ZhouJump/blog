@@ -30,3 +30,12 @@ steps:
     commands:
       - npm install -g edgeone
       - edgeone pages deploy ./public -n "$PROJECT_NAME" -t "$TEO_TOKEN" --force
+
+  - name: next  
+    image: plugins/downstream
+    settings:
+      server: https://drone.zhoujump.club
+      token:
+        from_secret: DRONE_TOKEN
+      repository: /ZhouJump/main-page
+      timeout: 600
