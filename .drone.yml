@@ -34,7 +34,7 @@ steps:
   - name: next  
     image: plugins/downstream
     settings:
-      server: http://172.18.0.2
+      server: http://172.18.0.3
       token:
         from_secret: DRONE_TOKEN
       repository: /ZhouJump/main-page@version2
