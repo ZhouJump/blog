@@ -31,7 +31,7 @@ steps:
   - name: next  
     image: plugins/downstream
     settings:
-      server: http://127.0.0.1:8080
+      server: https://drone.zhoujump.club
       token:
         from_secret: DRONE_TOKEN
       repositories:
