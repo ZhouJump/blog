@@ -38,4 +38,3 @@ steps:
       token:
         from_secret: DRONE_TOKEN
       repository: /ZhouJump/main-page
-      timeout: 600
