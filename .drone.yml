@@ -21,20 +21,20 @@ steps:
       - hugo
 
   - name: deploy
-    image: node:lts-alpine
+    image: nodeedgeone:latest
+    pull: never
     environment:
       TEO_TOKEN:
         from_secret: TEO_PAGES_TOKEN
       PROJECT_NAME:
         from_secret: TEO_PROJECT
     commands:
-      - npm install -g edgeone
       - edgeone pages deploy ./public -n "$PROJECT_NAME" -t "$TEO_TOKEN" --force
 
   - name: next  
     image: plugins/downstream
     settings:
-      server: https://drone.zhoujump.club
+      server: http://172.18.0.2
       token:
         from_secret: DRONE_TOKEN
       repository: /ZhouJump/main-page@version2
