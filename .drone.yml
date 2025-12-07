@@ -29,11 +29,10 @@ steps:
       - edgeone pages deploy ./public -n "$PROJECT_NAME" -t "$TEO_TOKEN" --force
 
   - name: next  
-    image: plugins/trigger
+    image: plugins/downstream
     settings:
       server: http://172.18.0.3
       token:
         from_secret: DRONE_TOKEN
       repositories:
-        - ZhouJump/main-page
-      ref: version2
+        - ZhouJump/main-page@version2
