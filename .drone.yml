@@ -37,4 +37,4 @@ steps:
       server: https://drone.zhoujump.club
       token:
         from_secret: DRONE_TOKEN
-      repository: /ZhouJump/main-page
+      repository: /ZhouJump/main-page@version2
