@@ -34,4 +34,5 @@ steps:
       server: http://172.18.0.3
       token:
         from_secret: DRONE_TOKEN
-      repository: /ZhouJump/main-page@version2
+      repository: ZhouJump/main-page
+      ref: version2
