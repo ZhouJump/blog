@@ -19,7 +19,7 @@ subtitle = "Every ordinary day we spend may be a miracle that happens continuous
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.png"
+src = "img/avatar.webp"
 
 [article]
 headingAnchor = false

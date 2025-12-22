@@ -1,0 +1,53 @@
+<header class="article-header">
+    {{- $image := partialCached "helper/image" (dict "Context" . "Type" "article") .RelPermalink "article" -}}
+    {{ if $image.exists }}
+    <div class="article-image">
+        <a href="{{ .RelPermalink }}">
+            {{ if $image.resource }}
+            {{- $res := $image.resource -}}
+            {{- $ext := path.Ext $res.Name -}}
+            {{- $isSVG := eq $ext ".svg" -}}
+            {{- $isWebP := eq $ext ".webp" -}}
+
+            {{/* 默认值 */}}
+            {{- $Permalink := $res.RelPermalink -}}
+            {{- $Width := $res.Width -}}
+            {{- $Height := $res.Height -}}
+            {{- $Srcset := "" -}}
+
+            {{- if not $isSVG -}}
+            {{/* 1. 如果不是 WebP 且不是 SVG，先将基础资源处理为 WebP */}}
+            {{- if not $isWebP -}}
+            {{- $res = $res.Process "webp" -}}
+            {{- $Permalink = $res.RelPermalink -}}
+            {{- end -}}
+
+            {{/* 2. 处理响应式缩略图 */}}
+            {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
+            {{/* 在 Resize 参数中强制加入 webp */}}
+            {{- $thumbnail := $res.Resize "800x webp" -}}
+            {{- $thumbnailRetina := $res.Resize "1600x webp" -}}
+
+            {{- $Srcset = printf "%s 800w, %s 1600w" $thumbnail.RelPermalink $thumbnailRetina.RelPermalink -}}
+            {{- $Permalink = $thumbnail.RelPermalink -}}
+            {{- $Width = $thumbnail.Width -}}
+            {{- $Height = $thumbnail.Height -}}
+            {{- end -}}
+            {{- end -}}
+
+            <img src="{{ $Permalink }}"
+                 {{ with $Srcset }}srcset="{{ . }}"{{ end }}
+                 width="{{ $Width }}"
+                 height="{{ $Height }}"
+                 loading="lazy"
+                 alt="Featured image of post {{ .Title }}" />
+            {{ else }}
+            {{/* 外部图片无法转换，保持原样 */}}
+            <img src="{{ $image.permalink }}" loading="lazy" alt="Featured image of post {{ .Title }}" />
+            {{ end }}
+        </a>
+    </div>
+    {{ end }}
+
+    {{ partialCached "article/components/details" . .RelPermalink }}
+</header>

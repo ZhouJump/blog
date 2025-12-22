@@ -1,0 +1,61 @@
+{{- $image := .Page.Resources.GetMatch (printf "%s" (.Destination | safeURL)) -}}
+{{- $Permalink := .Destination | relURL | safeURL -}}
+{{- $alt := .PlainText | safeHTML -}}
+{{- $Width := 0 -}}
+{{- $Height := 0 -}}
+{{- $Srcset := "" -}}
+
+{{- $galleryImage := false -}}
+
+{{- if $image -}}
+{{- $ext := path.Ext $image.Name -}}
+{{- $isSVG := eq $ext ".svg" -}}
+{{- $isWebP := eq $ext ".webp" -}}
+
+{{- if not $isSVG -}}
+{{- $Width = $image.Width -}}
+{{- $Height = $image.Height -}}
+{{- $galleryImage = true -}}
+
+{{/* 如果不是 WebP，则转换原图 */}}
+{{- if not $isWebP -}}
+{{- $image = $image.Process "webp" -}}
+{{- end -}}
+
+{{- $Permalink = $image.RelPermalink -}}
+
+{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
+{{/* 生成响应式图片，同样只对非 WebP 进行后缀声明 */}}
+{{- $small := "" -}}
+{{- $big := "" -}}
+
+{{- if $isWebP -}}
+{{- $small = $image.Resize "480x" -}}
+{{- $big = $image.Resize "1024x" -}}
+{{- else -}}
+{{- $small = $image.Resize "480x webp" -}}
+{{- $big = $image.Resize "1024x webp" -}}
+{{- end -}}
+
+{{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
+{{- end -}}
+{{- else -}}
+{{/* SVG 处理 */}}
+{{- $Permalink = $image.RelPermalink -}}
+{{- end -}}
+{{- end -}}
+
+<img src="{{ $Permalink }}"
+     {{ with $Width }}width="{{ . }}"{{ end }}
+     {{ with $Height }}height="{{ . }}"{{ end }}
+     {{ with $Srcset }}srcset="{{ . }}"{{ end }}
+     loading="lazy"
+     {{ with $alt }}
+     alt="{{ . }}"
+     {{ end }}
+     {{ if $galleryImage }}
+     class="gallery-image"
+     data-flex-grow="{{ div (mul $image.Width 100) $image.Height }}"
+     data-flex-basis="{{ div (mul $image.Width 240) $image.Height }}px"
+     {{ end }}
+>

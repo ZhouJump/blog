@@ -19,7 +19,7 @@ subtitle = "我们所度过的每个平凡的日常，也许就是连续发生�
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/avatar.png"
+src = "img/avatar.webp"
 
 [article]
 headingAnchor = false
