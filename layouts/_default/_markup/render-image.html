@@ -11,8 +11,9 @@
 {{- $ext := path.Ext $image.Name -}}
 {{- $isSVG := eq $ext ".svg" -}}
 {{- $isWebP := eq $ext ".webp" -}}
+{{- $isGIF := eq $ext ".gif" -}}
 
-{{- if not $isSVG -}}
+{{- if and (not $isSVG) (not $isGIF) -}}
 {{- $Width = $image.Width -}}
 {{- $Height = $image.Height -}}
 {{- $galleryImage = true -}}
