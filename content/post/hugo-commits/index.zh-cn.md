@@ -3,7 +3,7 @@ title: HUGO，评论！
 description: 关于如何免费为你的博客添加评论系统。
 slug: hugo-commits
 date: 2024-09-19 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
     - technology
 tags:
@@ -24,7 +24,7 @@ weight: 1
 [点击前往waline教程](http://u5a.cn/OdUZ7/)
 >vercel如果出现访问困难，请使用魔法上网。
 
-![做到这一步即可](1-1.png)
+![做到这一步即可](1-1.webp)
 
 ## 部署hugo
 
@@ -32,11 +32,11 @@ weight: 1
 
 进入已经部署的vercel项目 选择**Settings>Domains**前往域名管理界面，复制一个域名备用。
 
-![域名管理界面](2-1.png)
+![域名管理界面](2-1.webp)
 
 前往gitlab，找到`config/_default/params.toml`文件，编辑从107行开始的代码
 
-![如何编辑文件](2-2.png)
+![如何编辑文件](2-2.webp)
 
 ```go
 [comments.waline]

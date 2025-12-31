@@ -3,7 +3,7 @@ title: 如何向页面中嵌入UnityWeb3D
 description: 向html页面中嵌入UnityWeb3D模型
 slug: insert-unity
 date: 2025-04-18 00:00:00+0000
-image: cover.zh-cn.jpg
+image: cover.zh-cn.webp
 categories:
     - technology
     - HTML
@@ -21,18 +21,18 @@ weight: 1
 那有没有更经济和简单的技术呢？有的有的，兄弟有的，UnityWeb3D也许就是一个不错的选择。
 ## 工程准备
 Unity的场景搭建和后处理的添加非常简单，无需书写代码和着色器。具体操作方式B站大学有超级多教程可以学习，我这里准备了一个地球然后给它加了一些滤镜。
-![Unity场景](1-4.png)
+![Unity场景](1-4.webp)
 交互也是非常简单，通过可视化脚本写一些交互逻辑就可以了。具体也可以去B站大学选修。  
-![Unity交互](1-3.png)
+![Unity交互](1-3.webp)
 准备好工程后依次选择`编辑`>`生成设置`>`WebGL`>`切换平台`，切换项目至WebGL平台，期间unity会走一次进度条。我这里已经切换过了，所以显示的是生成按钮。  
-![构建设置](1-2.png)
+![构建设置](1-2.webp)
 等待切换完成后可以对生成设置进行一些配置，选择`编辑`>`项目设置`>`玩家`>`H5`。根据自己的需求来选择配置。unity默认使用了gzip压缩，可以大幅度降低生成大小，只是我们需要在服务器上配置gzip。嫌麻烦而且不缺流量带宽的富哥可以关掉。
-![生成设置](1-6.png)  
+![生成设置](1-6.webp)  
 然后点击生成，unity会让你选择一个文件夹来保存生成的文件。我这里新建了一个dist文件夹用来放置生成的文件。等待unity生成完成后，会生成一个index.html和一个Build文件夹。
-![生成](1-5.png)
+![生成](1-5.webp)
 ## 嵌入UnityWeb3D
 咱们把Build文件夹中所有文件都上传至服务器上，总共是四个文件，这里我是放在了`assets/unityAnimation`文件夹下。 
-![文件](2-1.png)   
+![文件](2-1.webp)   
 然后页面这边先引入刚刚上传的`dist.loader.js`文件，然后再准备一个canvas元素，并给予一个id，方便咱们在js中获取到它。
 ```html
 <script src="/assets/unityAnimation/dist.loader.js"></script>

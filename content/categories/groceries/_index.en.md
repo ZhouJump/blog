@@ -1,7 +1,7 @@
 ---
 title: groceries
 description: Some insignificant thoughts
-image: image.png
+image: image.webp
 
 # Badge style
 style:

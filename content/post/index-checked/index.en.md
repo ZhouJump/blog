@@ -3,7 +3,7 @@ title: Pure CSS to achieve the effect of circular flipping
 description: Cleverly use z-index and subsequent sibling selectors to achieve the effect of circular flipping
 slug: index-checked
 date: 2024-09-27 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
 - technology
 - HTML

@@ -3,7 +3,7 @@ title: How to embed UnityWeb3D into a page
 Description: Embed UnityWeb3D model into html page
 slug: insert-unity
 date: 2025-04-18 00:00:00+0000
-image: cover.en.jpg
+image: cover.en.webp
 categories:
     - technology
     - HTML
@@ -22,18 +22,18 @@ Currently, the most popular Web3D technologies include three.js, visual editing 
 So are there more economical and simpler technologies? Some are some, some are some, and UnityWeb3D may be a good choice.
 ## Project preparation
 Unity's scene construction and post-processing are very simple, without writing code and shaders. Specific operation methods: There are so many tutorials to learn at B station University. I have prepared an earth here and added some filters to it.
-![Unity scenes](1-4.png)
+![Unity scenes](1-4.webp)
 Interaction is also very simple, just write some interactive logic through visual scripts. You can also go to Bilibili University for an elective.
-![Unity interactions](1-3.png)
+![Unity interactions](1-3.webp)
 After you have prepared the project, select it in turn`Edit`>`Build Settings`>`WebGL`>`Switch Platform`, switch the project to the WebGL platform, and the progress bar will be passed once during the unity. I've switched here, so the Generate button is displayed.
-![Build Settings](1-2.png)
+![Build Settings](1-2.webp)
 After waiting for the switch to complete, you can make some configurations of the generation settings and select`Edit`>`Project Settings`>`Player`>`H5`. Choose configuration according to your needs. Unit uses gzip compression by default, which can greatly reduce the generation size, but we need to configure gzip on the server. Fu Ge, who thinks it’s troublesome and does not lack traffic bandwidth, can turn it off.
-![Building settings](1-6.png)  
+![Building settings](1-6.webp)  
 Then click Generate, unity will let you select a folder to save the generated files. I have created a new dist folder here to place the generated files. After waiting for unity generation to complete, an index.html and a Build folder will be generated.
-![Build](1-5.png)
+![Build](1-5.webp)
 ## Embed UnityWeb3D
 Let's upload all the files in the Build folder to the server. There are four files in total. I've put them here.`assets/unityAnimation`Under the folder.
-![Files](2-1.png)   
+![Files](2-1.webp)   
 Then, the page will be introduced first.`dist.loader.js`The file is then prepared and an id is given to us so that we can get it in js.
 ```html
 <script src="/assets/unityAnimation/dist.loader.js"></script>

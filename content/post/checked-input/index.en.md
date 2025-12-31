@@ -3,7 +3,7 @@ title: Pure CSS to implement the edit and save buttons of the input box
 description: Use the checked pseudo-class to implement the click button to switch the input box to the input state
 slug: checked_input
 date: 2024-09-29 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
 - technology
 - CSS

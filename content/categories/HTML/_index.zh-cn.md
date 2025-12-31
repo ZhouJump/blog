@@ -1,7 +1,7 @@
 ---
 title: HTML
 description: HTML相关的技术分享
-image: image.jpg
+image: image.webp
 
 # Badge style
 style:

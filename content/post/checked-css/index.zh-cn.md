@@ -3,7 +3,7 @@ title: 纯CSS实现选项选择效果
 description: 灵活使用checked伪类选择器实现元素单选多选效果
 slug: checked-css
 date: 2024-09-25 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
     - technology
     - CSS

@@ -3,7 +3,7 @@ title: Pure CSS to implement circular progress bar
 description: Use conical gradient and CSS variables to implement circular progress bar
 slug: circular-progression
 date: 2024-12-15 00:00:00+0000
-image: cover.en.jpg
+image: cover.en.webp
 categories:
 - technology
 - CSS

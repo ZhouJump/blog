@@ -3,7 +3,7 @@ title: 自己写一个小小vue - getter与setter
 description: Javascript中getter与setter的使用
 slug: getter-setter
 date: 2025-03-13 00:00:00+0000
-image: cover.zh-cn.jpg
+image: cover.zh-cn.webp
 categories:
 - technology
 - Javascript
@@ -54,9 +54,9 @@ if(box.boxContent){
 }
 ```
 第一行的if读取了box.boxContent，触发getter，然后弹出提示。
-![第一行的if读取了box.boxContent，触发getter，然后弹出提示。](1-1.png)
+![第一行的if读取了box.boxContent，触发getter，然后弹出提示。](1-1.webp)
 紧接我们修改了box.boxContent，触发setter，然后弹出提示。
-![紧接着第二行代码修改了box.boxContent,触发setter，然后弹出提示。](1-2.png)
+![紧接着第二行代码修改了box.boxContent,触发setter，然后弹出提示。](1-2.webp)
 
 好了，你已经学会了getter和setter了，让我们来实现一个vue把。
 ## 实现一个小小vue

@@ -3,7 +3,7 @@ title: 记录一个纯CSS实现滚动驱动动画的效果
 description: 使用sticky与animation-timeline实现元素固定的滚动驱动动画
 slug: animation-timeline
 date: 2025-09-14 00:00:00+0000
-image: cover.zh-cn.jpg
+image: cover.zh-cn.webp
 categories:
     - technology
     - CSS

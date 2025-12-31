@@ -3,7 +3,7 @@ title: Write a Tiny Vue - Getter and Setter
 description: The Use of Getter and Setter in JavaScript
 slug: getter-setter
 date: 2025-03-13 00:00:00+0000
-image: cover.en.jpg
+image: cover.en.webp
 categories:
 - technology
 tags:
@@ -55,9 +55,9 @@ if(box.boxContent){
 }
 ```
 The first line's `if` reads `box.boxContent`, triggering the getter, and then a prompt pops up. 
-![The if statement on the first line reads box.boxContent, triggering the getter and then a prompt pops up.](1-1.en.png)
+![The if statement on the first line reads box.boxContent, triggering the getter and then a prompt pops up.](1-1.en.webp)
 Immediately after we modified box.boxContent, the setter was triggered and a prompt popped up. 
-![Immediately after modifying box.boxContent in the second line of code, the setter is triggered and a prompt pops up.](1-2.en.png)
+![Immediately after modifying box.boxContent in the second line of code, the setter is triggered and a prompt pops up.](1-2.en.webp)
 
 
 Great! You've learned getters and setters. Let's implement a small Vue now.

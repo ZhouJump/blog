@@ -3,7 +3,7 @@ title: Summon the poster girl anytime, anywhere with one click.
 description: Inject javascript into any website through bookmarks to summon the poster girl.
 slug: creat-waifu
 date: 2024-09-27 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
 - technology
 - Javascript
@@ -21,10 +21,10 @@ Drag the blue square below to the favorites bar and release the mouse, the brows
 .waifu:hover::before{content: 'Press and hold the left mouse button to drag';}
 .waifu:active::before{content: 'Drag to the favorites bar and release';}
 </style>
-![Drag it to the favorites bar](1-2.png)
+![Drag it to the favorites bar](1-2.webp)
 
 Then we open a website at random, click this bookmark, and the poster girl will appear on the web page!
-![Summon the poster girl on Bilibili](1-1.png)
+![Summon the poster girl on Bilibili](1-1.webp)
 
 >This method can only be used for PC browsers, not mobile phones. <br/>
 And some websites, such as Bing, will prohibit loading external resources, and these websites will fail to summon. <br/>
@@ -43,10 +43,10 @@ document.getElementsByTagName('title')[0].innerText
 )
 ```
 We copy these codes and create a new bookmark, paste the code into the `URL` column and save it.
-![Create a new bookmark](2-1.png)
+![Create a new bookmark](2-1.webp)
 
 Then we open a website at random and click on this bookmark, and a dialog box will pop up to display the title of the current web page.
-![Bookmark effect](2-2.png)
+![Bookmark effect](2-2.webp)
 
 However, if the code you execute has a return value, you need to add a line `void(0);` at the end of the js code, otherwise clicking the bookmark will jump to another page and display the return value on that page.
 ## The principle of summoning the poster girl

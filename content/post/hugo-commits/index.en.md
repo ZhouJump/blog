@@ -4,7 +4,7 @@ title: HUGO, Comment!
 description: How to add a comment system to your blog for free.
 slug: hugo-commits
 date: 2024-09-19 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
 - technology
 tags:
@@ -25,7 +25,7 @@ This part is introduced in detail on the waline official website. We only need t
 [Click to go to waline tutorial](http://u5a.cn/OdUZ7/)
 >If you have difficulty accessing vercel, please use magic Internet.
 
-![Just do this step](1-1.png)
+![Just do this step](1-1.webp)
 
 ## Deploy hugo
 
@@ -33,11 +33,11 @@ This part is introduced in detail on the waline official website. We only need t
 
 Enter the deployed vercel project and select **Settings>Domains** to go to the domain name management interface and copy a domain name for backup.
 
-![Domain name management interface](2-1.png)
+![Domain name management interface](2-1.webp)
 
 Go to gitlab, find the `config/_default/params.toml` file, and edit the code starting from line 107
 
-![How to edit files](2-2.png)
+![How to edit files](2-2.webp)
 
 ```go
 [comments.waline]

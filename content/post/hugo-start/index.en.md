@@ -3,7 +3,7 @@ title: HUGO, start!
 description: This article will teach you how to start a personal blog for free and at the speed of light
 slug: hugo-start
 date: 2024-09-14 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
 - technology
 tags:
@@ -20,11 +20,11 @@ weight: 1
 At present, what you need to prepare is very simple, just a gitlab account, if you don't have one, you can [click here](https://gitlab.com/users/sign_up) to register one.
 >If you encounter this situation, you may need magic Internet access. The mainland-only version of Jihu does not provide pages service
 >
->![The Chinese region will be forced to jump to Jihu](1-1.png)
+>![The Chinese region will be forced to jump to Jihu](1-1.webp)
 
 After registration, you will be asked to fill in some information. When you fill in this step, you can deploy.
 
-![This is the page you will enter when you register for the first time. If it is not the first time, you can directly create a new project](1-2.png)
+![This is the page you will enter when you register for the first time. If it is not the first time, you can directly create a new project](1-2.webp)
 
 ## Pull and deploy
 ### Create a project
@@ -36,12 +36,12 @@ Next, scroll down and fill in `https://github.com/CaiJimmy/hugo-theme-stack-star
 
 Finally, click **New Project**
 
-![Project Name and Project Identifier String will not be detected as duplicates like Group Name](2-1.png)
+![Project Name and Project Identifier String will not be detected as duplicates like Group Name](2-1.webp)
 
 ### Start Project
 As shown in the figure, click **+** and then click **New File**, let's create a new configuration file to start the gitlab pipeline.
 
-![New File](2-2.png)
+![New File](2-2.webp)
 
 Fill in `.gitlab-ci.yml` in the file name.
 Enter the following content in the text: 
@@ -92,22 +92,22 @@ pages:
 
 Then scroll down and select **Submit changes**.
 
-![File content and file name](2-3.png)
+![File content and file name](2-3.webp)
 
 Next, we click **Build**, then click **Pipeline**, and you can see the project currently being built.
 >If you have just registered a gitlab account, you may be asked to verify your phone number. You need to prepare a non-mainland phone number to receive text messages.
 
-![This page is under Build>Pipeline in the sidebar](2-4.png)
+![This page is under Build>Pipeline in the sidebar](2-4.webp)
 
 When the pipeline status changes to **Passed**, we click **Deploy**, then click **Pages**, and you can see the URL assigned by gitlab for us.
 
-![This page is under Deploy>Pages in the sidebar](2-5.png)
+![This page is under Deploy>Pages in the sidebar](2-5.webp)
 
 We click this link to open our website.
 
-![Domain name assigned by gitlab](2-6.png)
+![Domain name assigned by gitlab](2-6.webp)
 
 If the interface displays abnormally after opening, you need to go to the `config/_default/config.toml` file to modify some configurations and change the content in `baseurl` to the address assigned by gitlab in the previous step. After saving the file, wait for the pipeline to execute again, and then refresh the page, the website should be displayed normally.
 >Because I have bound a domain name here, I filled in the domain name. In the next article, I will teach you how to purchase and bind a domain name.
 
-![Configuration file content](2-7.png)
+![Configuration file content](2-7.webp)

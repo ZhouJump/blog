@@ -1,7 +1,7 @@
 ---
 title: 技术分享
 description: 一些技术教程分享
-image: image.png
+image: image.webp
 
 # Badge style
 style:

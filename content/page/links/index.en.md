@@ -9,7 +9,7 @@ links:
   - title: zhou's card shop
     description: Cheap and large calling cards
     website: https://card.zhoujump.club/
-    image: https://card.zhoujump.club/img/personal/avatar.jpg
+    image: https://card.zhoujump.club/img/personal/avatar.webp
 
   - title: zhou's page
     description: my website home
@@ -18,12 +18,12 @@ links:
   - title: WebTime
     description: An explorer focused on technological innovation, moving beyond time and following his heart!
     website: https://www.wbtime.com/
-    image: https://static.wbtime.com/wt/www/ico/logo1.png
+    image: https://static.wbtime.com/wt/www/ico/logo1.webp
 
   - title: Ultimate Navigation
     description: Practical resource website navigation favorites
     website: https://www.zjnav.com/
-    image: https://www.zjnav.com/wp-content/uploads/2022/08/1660466052-ico.png
+    image: https://www.zjnav.com/wp-content/uploads/2022/08/1660466052-ico.webp
 menu:
     main: 
         weight: 4

@@ -1,7 +1,7 @@
 ---
 title: 简历编辑器
 description: 关于这个简历编辑器的一切
-image: image.jpg
+image: image.webp
 
 # Badge style
 style:

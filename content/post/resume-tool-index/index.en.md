@@ -3,7 +3,7 @@ title: My resume editor is online
 description: I have released a free resume editor that does not require login. Welcome everyone to use it.
 slug: resume-tool-index
 date: 2024-10-07 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
 - resume-tool
 - Vue

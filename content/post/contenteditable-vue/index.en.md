@@ -3,7 +3,7 @@ title: Two-way data binding of contenteditable elements in Vue
 description: Detailed explanation of the contenteditable="true" element attribute and two-way data binding in Vue
 slug: contenteditable-vue
 date: 2025-08-26 00:00:00+0000
-image: cover.en.jpg
+image: cover.en.webp
 categories:
     - technology
     - Vue
@@ -19,7 +19,7 @@ A record of what to pay attention to when using the contenteditable attribute in
 ## contenteditable
 ### Usage
 Adding contenteditable="true" attribute to any element can make the element editable. It can achieve richer editing control layout than ordinary input and textarea. For example, an editor that can embed tags like this:
-![A text editor that can embed tags](1-1.png)
+![A text editor that can embed tags](1-1.webp)
 ### Features
 If the contenteditable attribute is only added without assigning a value, it will be regarded as contenteditable="false".
 If there is an element with contenteditable="false" in a container with contenteditable="true", then the element itself cannot be edited, but pressing backspace can delete the entire element.
@@ -27,7 +27,7 @@ If there is an ordinary element in a container with contenteditable="true", then
 ## About Vue binding
 ### v-model
 v-model essentially automatically binds the input event and value attribute. Although contenteditable will give the element an input event, since the contenteditable attribute is needed, this element is likely to have no value attribute. So in most cases, v-model can only pass the element content to Vue, but Vue cannot update the element content.
-![v-model of contenteditable element](2-1.png)
+![v-model of contenteditable element](2-1.webp)
 At this time, if you naturally bind the value:
 ```vue
 <span contenteditable="true" v-model="item.value" v-html="item.value"></span>

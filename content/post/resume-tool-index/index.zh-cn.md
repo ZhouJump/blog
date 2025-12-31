@@ -3,7 +3,7 @@ title: 我的简历编辑器上线了
 description: 我发布了一款免费，无需登录的简历编辑器，欢迎大家使用。
 slug: resume-tool-index
 date: 2024-10-07 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
     - resume-tool
     - Vue

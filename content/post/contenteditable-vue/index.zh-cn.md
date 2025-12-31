@@ -3,7 +3,7 @@ title: 在vue中contenteditable元素的双向数据绑定
 description: contenteditable="true"的元素属性详解以及在vue中的双向数据绑定
 slug: contenteditable-vue
 date: 2025-08-26 00:00:00+0000
-image: cover.zh-cn.jpg
+image: cover.zh-cn.webp
 categories:
     - technology
     - Vue
@@ -18,7 +18,7 @@ weight: 1
 ## contenteditable
 ### 用途
 给任何元素加上contenteditable="true"属性，就可以让元素变为可编辑状态。可以实现比普通input、textarea更丰富编辑控件排版。例如这种可以嵌入tag的编辑框。
-![一个可以嵌入tag的文本编辑器](1-1.png)
+![一个可以嵌入tag的文本编辑器](1-1.webp)
 ### 特点
 仅添加contenteditable属性而不赋予值，将视为contenteditable="false"。  
 若contenteditable="true"的容器中存在contenteditable="false"的元素，那么那个元素本身将不能编辑，不过按下退格能将整个元素一起删除。  
@@ -26,7 +26,7 @@ weight: 1
 ## 关于Vue的绑定  
 ### v-model
 v-model本质是自动绑定input事件和value属性。虽然contenteditable将赋予元素input事件，但是既然都需要contenteditable属性了，这个元素大概率是没有value属性的。所以大部分情况下v-model只能将元素内容给到vue，但vue无法更新元素的内容。  
-![contenteditable元素的v-model](2-1.png)
+![contenteditable元素的v-model](2-1.webp)
 这时候如果理所当然的去绑定值：
 ```vue
 <span contenteditable="true" v-model="item.value" v-html="item.value"></span>

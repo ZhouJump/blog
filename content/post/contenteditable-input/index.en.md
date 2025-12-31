@@ -3,7 +3,7 @@ title: How to implement an input box whose width changes with the text
 description: Use the contenteditable attribute to implement an input box with variable width
 slug: contenteditable-input
 date: 2024-09-24 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
 - technology
 - HTML

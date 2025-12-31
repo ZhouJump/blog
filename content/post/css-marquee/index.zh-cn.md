@@ -3,7 +3,7 @@ title: 纯css实现跑马灯效果
 description: 使用css动画实现跑马灯效果
 slug: css-marquee
 date: 2025-02-20 00:00:00+0000
-image: cover.zh-cn.jpg
+image: cover.zh-cn.webp
 categories:
     - technology
     - CSS
@@ -37,7 +37,7 @@ weight: 1
 ## `<marquee>`标签
 这时候一些前端大佬就会站起来说了，这不就是一个`<marquee>`标签的事吗？  
 不过这个元素目前已经被废弃了，虽然还能继续使用，但保不齐哪天就被主流浏览器移除了。我们还是少用为妙
-![跑马灯已经被移除了](1-1.png)
+![跑马灯已经被移除了](1-1.webp)
 
 ## 使用css动画
 ### 为文字应用动画

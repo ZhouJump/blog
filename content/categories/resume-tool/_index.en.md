@@ -1,7 +1,7 @@
 ---
 title: Resume Editor
 description: Everything about this resume editor
-image: image.jpg
+image: image.webp
 
 # Badge style
 style:

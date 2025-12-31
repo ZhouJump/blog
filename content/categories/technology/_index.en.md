@@ -1,7 +1,7 @@
 ---
 title: Technology Sharing
 description: Some technical tutorials to share
-image: image.png
+image: image.webp
 
 # Badge style
 style:

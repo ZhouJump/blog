@@ -3,7 +3,7 @@ title: 纯CSS实现一个炫酷的输入框效果
 description: 通过:valid伪类和required属性纯css实现动态label输入框
 slug: valid_input
 date: 2024-10-22 00:00:00+0000
-image: cover.zh-cn.jpg
+image: cover.zh-cn.webp
 categories:
     - technology
     - CSS

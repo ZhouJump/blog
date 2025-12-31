@@ -1,7 +1,7 @@
 ---
 title: Vue
 description: Vue related technical tutorials to share
-image: image.jpg
+image: image.webp
 
 # Badge style
 style:

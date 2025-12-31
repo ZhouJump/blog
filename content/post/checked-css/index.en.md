@@ -3,7 +3,7 @@ title: Pure CSS to achieve option selection effect
 description: Flexible use of checked pseudo-class selector to achieve single-select and multiple-select element effects
 slug: checked-css
 date: 2024-09-25 00:00:00+0000
-image: cover.jpg
+image: cover.webp
 categories:
 - technology
 - CSS

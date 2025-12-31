@@ -1,7 +1,7 @@
 ---
 title: CSS
 description: CSS related technical tutorials to share
-image: image.jpg
+image: image.webp
 
 # Badge style
 style:

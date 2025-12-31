@@ -3,7 +3,7 @@ title: Cleverly use attribute selectors to implement filters in pure CSS
 description: Implement filters in pure CSS through the :has() pseudo-class and attribute selectors
 slug: checkbox-filter
 date: 2024-10-18 00:00:00+0000
-image: cover.en.jpg
+image: cover.en.webp
 categories:
 - technology
 - CSS

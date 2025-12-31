@@ -3,7 +3,7 @@ title: Pure CSS to achieve the marquee effect
 description: Use CSS animation to achieve the marquee effect
 slug: css-marquee
 date: 2025-02-20 00:00:00+0000
-image: cover.en.jpg
+image: cover.en.webp
 categories:
 - technology
 - CSS
@@ -37,7 +37,7 @@ animation: marquee 10s linear infinite;
 ## `<marquee>` tag
 At this time, some front-end bosses will stand up and say, isn't this just a matter of `<marquee>` tag?
 However, this element has been abandoned. Although it can still be used, it may be removed by mainstream browsers one day. It is better to use it less
-![The marquee has been removed](1-1-en.png)
+![The marquee has been removed](1-1-en.webp)
 
 ## Use CSS animation
 ### Apply animation to text
