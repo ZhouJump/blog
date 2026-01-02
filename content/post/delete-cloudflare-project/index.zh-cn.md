@@ -2,7 +2,7 @@
 title: 删除具有大量部署的cloudflare pages项目
 description: 删除cloudflare pages时出现提示Your project has too many deployments to be deleted, follow this guide to delete them该如何处理
 slug: delete-cloudflare-project
-date: 2026-1-2 00:00:00+0000
+date: 2026-01-02 00:00:00+0000
 image: cover.zh-cn.webp
 categories:
     - technology

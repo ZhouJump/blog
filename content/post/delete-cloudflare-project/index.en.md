@@ -2,7 +2,7 @@
 title: Deleting Cloudflare Pages projects with many deployments
 description: When deleting Cloudflare pages, if you get the error "Your project has too many deployments to be deleted", follow this guide to delete them
 slug: delete-cloudflare-project
-date: 2026-1-2 00:00:00+0000
+date: 2026-01-02 00:00:00+0000
 image: cover.en.webp
 categories:
     - technology
