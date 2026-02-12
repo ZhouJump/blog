@@ -14,6 +14,11 @@ links:
   - title: 粥粥的主页
     description: 我的主页
     website: https://zhoujump.club/
+    
+  - title: 酷小呵资源站
+    description: 欢迎来到酷小呵资源站！
+    website: https://kuhehe.kuhehe.top/
+    image: https://img.notionusercontent.com/s3/prod-files-secure%2F963ce0ab-493e-4ca4-87ee-20eced0399c6%2Fb94cf1c2-d2f1-4710-aa4c-cdfd22629fe9%2F1000050953.webp/size/?exp=1770964148&sig=fKq5L1y8pNFZCciQ7DPBh1zbMu7p9Jd7kSXMNXMFvxc&id=18ba7a4a-d191-8129-8b4e-000b13a276b2&table=collection
 
   - title: 时光探索者
     description: 一个专注于技术创新的探索者，时光之外，随心而动！
