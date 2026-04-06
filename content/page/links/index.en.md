@@ -14,6 +14,11 @@ links:
   - title: zhou's page
     description: my website home
     website: https://zhoujump.club/
+    
+  - title: kuhehe.top
+    description: welcome to kuhehe.top
+    website: https://kuhehe.kuhehe.top/
+    image: https://img.notionusercontent.com/s3/prod-files-secure%2F963ce0ab-493e-4ca4-87ee-20eced0399c6%2Fb94cf1c2-d2f1-4710-aa4c-cdfd22629fe9%2F1000050953.webp/size/?exp=1770964148&sig=fKq5L1y8pNFZCciQ7DPBh1zbMu7p9Jd7kSXMNXMFvxc&id=18ba7a4a-d191-8129-8b4e-000b13a276b2&table=collection
 
   - title: WebTime
     description: An explorer focused on technological innovation, moving beyond time and following his heart!
