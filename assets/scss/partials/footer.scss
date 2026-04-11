@@ -21,10 +21,11 @@ footer.site-footer {
     .powerby {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 0 1rem;
         color: var(--body-text-color);
         font-weight: normal;
         font-size: 1.2rem;
+        margin-bottom: 10px;
         .item{
           a {
             color: var(--body-text-color);
@@ -34,5 +35,43 @@ footer.site-footer {
           }
         }
 
+    } 
+
+    .badge{
+      display: flex;
+      gap: 6px;
+      img{
+        display: block;
+      }
+      .boyouquan, .blogs-cn, .not-ai, .travelling{
+        height: 30px;
+      }
+      .travelling{
+        font-weight: bold;
+        line-height: 30px;
+        background: var(--card-background);
+        box-shadow: var(--shadow-l1);
+        border-radius: var(--tag-border-radius);
+        padding: 0 12px;
+        color: var(--card-text-color-main);
+      }
     }
 }
+
+html[data-scheme="dark"] .badge {
+  .icon-light-only{
+    display: none;
+  }
+  .icon-dark-only{
+    display: block;
+  }
+}
+html[data-scheme="light"] .badge{
+  .icon-dark-only{
+    display: none;
+  }
+  .icon-light-only{
+    display: block;
+  }
+}
+

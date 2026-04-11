@@ -25,4 +25,33 @@
             <a target="_blank" href="https://beian.mps.gov.cn/#/query/webSearch?code=35021102002336">闽公网安备35021102002336号</a>
         </div>
     </section>
+
+    <section class="badge">
+        {{ $lang := .Language.Lang }}
+        {{ if eq $lang "zh-cn" }}
+            <a href="https://blogscn.fun/" title="BLOGS·CN" target="_blank" >
+                <img src="https://photo.xiangming.site/img/blogscn_icon.png" class="blogs-cn" alt="本站已加入BLOGS·CN">
+            </a>
+            <a href="https://www.boyouquan.com/" title="博友圈" target="_blank" >
+                <img src="https://www.boyouquan.com/images/logo/performance.svg?domainName=blog.zhoujump.club" class="icon-light-only boyouquan" alt="博友圈">
+                <img src="https://www.boyouquan.com/images/logo/performance-dark.svg?domainName=blog.zhoujump.club" class="icon-dark-only boyouquan" alt="博友圈">
+            </a>
+            <a href="https://notbyai.fyi" target="_blank">
+                <img src="/not-ai-zh-light.svg" class="icon-light-only not-ai" alt="非AI生成">
+                <img src="/not-ai-zh-dark.svg" class="icon-dark-only  not-ai" alt="非AI生成">
+            </a>  
+        {{ else }}
+            <a href="https://blogscn.fun/" title="BLOGS·CN" target="_blank" >
+                <img src="https://photo.xiangming.site/img/blogscn_icon.png" class="blogs-cn" alt="This website is part of BLOGS·CN">
+            </a>
+            <a href="https://www.boyouquan.com/" title="BoYouQuan" target="_blank" >
+                <img src="https://www.boyouquan.com/images/logo/performance.svg?domainName=blog.zhoujump.club" class="icon-light-only boyouquan" alt="BoYouQuan">
+                <img src="https://www.boyouquan.com/images/logo/performance-dark.svg?domainName=blog.zhoujump.club" class="icon-dark-only boyouquan" alt="BoYouQuan">
+            </a>
+            <a href="https://notbyai.fyi" target="_blank">
+                <img src="/not-ai-en-light.svg" class="icon-light-only not-ai" alt="Not AI">
+                <img src="/not-ai-en-dark.svg" class="icon-dark-only not-ai" alt="Not AI">
+            </a>
+        {{ end }}
+    </section>
 </footer>

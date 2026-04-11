@@ -14,6 +14,15 @@ url = "https://comments.zhoujump.club/ui/profile"
 icon = "user"
 newTab = true
 
+[[main]]
+identifier = "travelling"
+name = "Travelling"
+url = "https://www.travellings.cn/go"
+
+[main.params]
+icon = "train"
+newTab = true
+
 [[social]]
 identifier = "github"
 name = "Github"
