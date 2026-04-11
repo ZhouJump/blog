@@ -5,6 +5,7 @@
 #[main.params]
 #icon = "home"
 #newtab = true
+
 [[main]]
 identifier = "comment"
 name = "Account"
