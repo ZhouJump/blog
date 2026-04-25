@@ -1,0 +1,72 @@
+backend:
+  name: github
+  repo: ZhouJump/blog # 例如: myname/my-hugo-site
+  branch: master # 或者你的主分支名
+
+locale: zh_Hans
+
+media_folder: "assets/images" # 全局图片路径
+public_folder: "/images"
+
+# 多语言配置
+i18n:
+  structure: multiple_files # 对应你 index.zh-cn.md 的多文件模式
+  locales: [zh-cn, en]
+  default_locale: zh-cn
+
+collections:
+  - name: "posts"
+    label: "文章"
+    label_singular: "文章"
+    folder: "content/post" # 修改为你文章所在的实际目录
+    create: true
+    edit: true
+    i18n:
+      structure: multiple_files
+      locales: [zh-cn, en]
+    path: "{{slug}}/index" 
+    media_folder: "" # 图片将保存在文章同级目录下
+    public_folder: ""
+    fields:
+      - { label: "标题", name: "title", widget: "string", i18n: true }
+      - { label: "描述", name: "description", widget: "text", i18n: true }
+      - { label: "分类", name: "categories", widget: "list"}
+      - { label: "标签", name: "tags", widget: "list" }
+      - { label: "链接", name: "slug", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime" }
+      - { label: "封面图", name: "image", widget: "image", i18n: true }
+      - { label: "正文", name: "body", widget: "markdown", i18n: true }
+
+  - name: "pages"
+    label: "单页"
+    folder: "content/page"
+    create: true
+    edit: true
+    i18n:
+      structure: multiple_files
+      locales: [zh-cn, en]
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
+    fields:
+      - { label: "标题", name: "title", widget: "string", i18n: true }
+      - { label: "描述", name: "description", widget: "text", i18n: true }
+      - { label: "正文", name: "body", widget: "markdown", i18n: true }
+
+  - name: "categories"
+    label: "分类管理"
+    folder: "content/categories"
+    create: true
+    edit: true
+    i18n:
+      structure: multiple_files
+      locales: [zh-cn, en]
+    # 注意：分类通常使用 _index.md 
+    path: "{{slug}}/_index"
+    fields:
+      - { label: "分类名称", name: "title", widget: "string", i18n: true }
+      - { label: "分类描述", name: "description", widget: "text", i18n: true }
+      - { label: "分类封面", name: "image", widget: "image", i18n: true }
+      - { label: "背景颜色", name: "background", widget: "color" }
+      - { label: "文字颜色", name: "color", widget: "color" }
+      - { label: "目录名", name: "slug", widget: "hidden", default: "{{slug}}" }
