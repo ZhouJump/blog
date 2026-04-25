@@ -1,0 +1,207 @@
+paths:
+  static: static
+  uploads: static/uploads
+timezone: Asia/Hong_Kong
+markdown:
+  engine: commonmark
+  options:
+    gfm: true
+    linkify: false
+    table: false
+    strikethrough: false
+    subscript: false
+    superscript: false
+    heading_ids: false
+    breaks: false
+    xhtml: false
+    attributes: false
+    typographer: false
+    treat_indentation_as_code: true
+_snippets_imports:
+  hugo:
+    exclude:
+      - hugo_instagram
+collections_config:
+  pages:
+    path: content
+    icon: wysiwyg
+  categories:
+    path: content/categories
+    icon: category
+    glob:
+      - '!_index.md'
+  categories_css:
+    path: content/categories/CSS
+    icon: category
+    glob:
+      - '!_index.md'
+  categories_groceries:
+    path: content/categories/groceries
+    icon: category_search
+    glob:
+      - '!_index.md'
+  categories_html:
+    path: content/categories/HTML
+    icon: category_search
+    glob:
+      - '!_index.md'
+  categories_javascript:
+    path: content/categories/Javascript
+    icon: category_search
+    glob:
+      - '!_index.md'
+  categories_nuxt:
+    path: content/categories/Nuxt
+    icon: category_search
+    glob:
+      - '!_index.md'
+  categories_resume_tool:
+    path: content/categories/resume-tool
+    icon: category_search
+    glob:
+      - '!_index.md'
+  categories_technology:
+    path: content/categories/technology
+    icon: category_search
+    glob:
+      - '!_index.md'
+  categories_vue:
+    path: content/categories/VUE
+    icon: category
+    glob:
+      - '!_index.md'
+  page:
+    path: content/page
+    icon: pace
+    glob:
+      - '!_index.md'
+  page_archives:
+    path: content/page/archives
+    icon: archive
+    glob:
+      - '!_index.md'
+  page_links:
+    path: content/page/links
+    icon: page_info
+    glob:
+      - '!_index.md'
+  page_search:
+    path: content/page/search
+    icon: image_search
+    glob:
+      - '!_index.md'
+  post:
+    path: content/post
+    icon: event_available
+    glob:
+      - '!_index.md'
+  post_animation_timeline:
+    path: content/post/animation-timeline
+    icon: notification_multiple
+    glob:
+      - '!_index.md'
+  post_checkbox_filter:
+    path: content/post/checkbox-filter
+    icon: attach_file
+    glob:
+      - '!_index.md'
+  post_checked_css:
+    path: content/post/checked-css
+    icon: checked_bag
+    glob:
+      - '!_index.md'
+  post_checked_input:
+    path: content/post/checked-input
+    icon: check_in_out
+    glob:
+      - '!_index.md'
+  post_circular_progression:
+    path: content/post/circular-progression
+    icon: regular_expression
+    glob:
+      - '!_index.md'
+  post_contenteditable_input:
+    path: content/post/contenteditable-input
+    icon: display_external_input
+    glob:
+      - '!_index.md'
+  post_contenteditable_vue:
+    path: content/post/contenteditable-vue
+    icon: cast_connected
+    glob:
+      - '!_index.md'
+  post_creat_waifu:
+    path: content/post/creat-waifu
+    icon: boat_railway
+    glob:
+      - '!_index.md'
+  post_css_marquee:
+    path: content/post/css-marquee
+    icon: ios_share
+    glob:
+      - '!_index.md'
+  post_delete_cloudflare_project:
+    path: content/post/delete-cloudflare-project
+    icon: nest_remote_comfort_sensor
+    glob:
+      - '!_index.md'
+  post_getter_setter:
+    path: content/post/getter-setter
+    icon: detector_battery
+    glob:
+      - '!_index.md'
+  post_gitlab_to_cloudflare:
+    path: content/post/gitlab-to-cloudflare
+    icon: contrast_square
+    glob:
+      - '!_index.md'
+  post_grid_transition:
+    path: content/post/grid-transition
+    icon: masked_transitions
+    glob:
+      - '!_index.md'
+  post_hugo_commits:
+    path: content/post/hugo-commits
+    icon: commit
+    glob:
+      - '!_index.md'
+  post_hugo_domain:
+    path: content/post/hugo-domain
+    icon: pinch_zoom_in
+    glob:
+      - '!_index.md'
+  post_hugo_start:
+    path: content/post/hugo-start
+    icon: align_start
+    glob:
+      - '!_index.md'
+  post_index_checked:
+    path: content/post/index-checked
+    icon: folder_check
+    glob:
+      - '!_index.md'
+  post_input_star:
+    path: content/post/input-star
+    icon: point_scan
+    glob:
+      - '!_index.md'
+  post_insert_unity:
+    path: content/post/insert-unity
+    icon: insert_text
+    glob:
+      - '!_index.md'
+  post_learn_nuxt_1:
+    path: content/post/learn-nuxt-1
+    icon: cast_warning
+    glob:
+      - '!_index.md'
+  post_resume_tool_index:
+    path: content/post/resume-tool-index
+    icon: forward_to_inbox
+    glob:
+      - '!_index.md'
+  post_valid_input:
+    path: content/post/valid-input
+    icon: power_input
+    glob:
+      - '!_index.md'
