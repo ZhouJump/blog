@@ -7,15 +7,6 @@
 #newtab = true
 
 [[main]]
-identifier = "comment"
-name = "账户"
-url = "https://comments.zhoujump.club/ui/profile"
-
-[main.params]
-icon = "user"
-newTab = true
-
-[[main]]
 identifier = "travelling"
 name = "开往"
 url = "https://www.travellings.cn/go"

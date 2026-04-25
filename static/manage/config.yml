@@ -30,8 +30,8 @@ collections:
     fields:
       - { label: "标题", name: "title", widget: "string", i18n: true }
       - { label: "描述", name: "description", widget: "text", i18n: true }
-      - { label: "分类", name: "categories", widget: "list"}
-      - { label: "标签", name: "tags", widget: "list" }
+      - { label: "分类", name: "categories", widget: "native-category" }
+      - { label: "标签", name: "tags", widget: "native-tags", i18n: true }
       - { label: "链接", name: "slug", widget: "string" }
       - { label: "发布日期", name: "date", widget: "datetime" }
       - { label: "封面图", name: "image", widget: "image", i18n: true }
@@ -54,7 +54,7 @@ collections:
       - { label: "正文", name: "body", widget: "markdown", i18n: true }
 
   - name: "categories"
-    label: "分类管理"
+    label: "分类"
     folder: "content/categories"
     create: true
     edit: true
@@ -67,6 +67,9 @@ collections:
       - { label: "分类名称", name: "title", widget: "string", i18n: true }
       - { label: "分类描述", name: "description", widget: "text", i18n: true }
       - { label: "分类封面", name: "image", widget: "image", i18n: true }
-      - { label: "背景颜色", name: "background", widget: "color" }
-      - { label: "文字颜色", name: "color", widget: "color" }
-      - { label: "目录名", name: "slug", widget: "hidden", default: "{{slug}}" }
+      - label: "分类样式"
+        name: "style"
+        widget: "object" # 必须明确它是对象
+        fields:
+          - { label: "背景颜色", name: "background", widget: "color" }
+          - { label: "文字颜色", name: "color", widget: "color" }

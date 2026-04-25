@@ -1,11 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+ <script>
+  const h = window.h || window.React.createElement;
+
+  const createMultiSelectWidget = (isCategory = false) => window.createClass({
+    render: function() {
+      return h('div', { id: this.props.forID });
+    },
+
+    renderBadges: function(container, items, nameToTitleMap) {
+      container.innerHTML = '';
+      items.forEach((item, index) => {
+        const span = document.createElement('span');
+        span.style = "background:#eee; color:#444; padding:2px 10px; border-radius:16px; margin:4px; display:inline-flex; align-items:center; font-size:13px; border:1px solid #ccc; font-family: sans-serif;";
+        
+        // 显示逻辑：优先找 Map 里的 Title，找不到（加载中）则显示目录名
+        const displayLabel = isCategory ? (nameToTitleMap[item] || item) : item;
+        span.textContent = displayLabel;
+        
+        const closeBtn = document.createElement('button');
+        closeBtn.textContent = '×';
+        closeBtn.style = "margin-left:6px; border:none; background:none; cursor:pointer; color:#999; font-size:16px; font-weight:bold; padding:0; line-height:1;";
+        closeBtn.onclick = (e) => {
+          e.preventDefault();
+          items.splice(index, 1);
+          this.props.onChange(items);
+          this.renderBadges(container, items, nameToTitleMap);
+        };
+        span.appendChild(closeBtn);
+        container.appendChild(span);
+      });
+    },
+
+    componentDidMount: function() {
+      const el = document.getElementById(this.props.forID);
+      el.style = "border:2px solid #dfdfe3; border-radius:0 5px 5px 5px; background:#fff; padding:4px; display:flex; flex-wrap:wrap; align-items:center; min-height:36px; transition: border-color 0.2s;";
+      
+      // 聚焦效果
+      el.onfocusin = () => el.style.borderColor = "#3a69a8";
+      el.onfocusout = () => el.style.borderColor = "#dfdfe3";
+
+      let rawValue = this.props.value;
+      let values = [];
+      if (rawValue) {
+        values = typeof rawValue.toArray === 'function' ? rawValue.toArray() : (Array.isArray(rawValue) ? [...rawValue] : [rawValue.toString()]);
+      }
+
+      const badgeContainer = document.createElement('div');
+      badgeContainer.style = "display:contents;";
+      const nameToTitleMap = {}; 
+
+      if (isCategory) {
+        const select = document.createElement('select');
+        select.style = "border:none; outline:none; background:transparent; height:30px; font-size:14px; color:#777; cursor:pointer; margin-left:4px; flex:1; min-width:150px;";
+        select.innerHTML = '<option value="">+ 添加分类...</option>';
+
+        fetch('https://api.github.com/repos/ZhouJump/blog/contents/content/categories')
+          .then(res => res.json())
+          .then(async (data) => {
+            const folders = Array.isArray(data) ? data.filter(i => i.type === 'dir').map(i => i.name) : [];
+            
+            for (const folder of folders) {
+              try {
+                const fileRes = await fetch(`https://api.github.com/repos/ZhouJump/blog/contents/content/categories/${folder}/_index.zh-cn.md`);
+                const fileData = await fileRes.json();
+                
+                // --- 核心修复：UTF-8 解码 ---
+                const content = decodeURIComponent(escape(atob(fileData.content)));
+                const titleMatch = content.match(/title:\s*["']?(.*?)["']?(\r?\n|$)/);
+                const title = titleMatch ? titleMatch[1].trim() : folder;
+                
+                nameToTitleMap[folder] = title;
+                const opt = document.createElement('option');
+                opt.value = folder;
+                opt.textContent = title;
+                select.appendChild(opt);
+              } catch (e) {
+                nameToTitleMap[folder] = folder;
+              }
+            }
+            // 重新渲染以更新气泡中的中文名
+            this.renderBadges(badgeContainer, values, nameToTitleMap);
+          });
+
+        select.onchange = (e) => {
+          const val = e.target.value;
+          if (val && !values.includes(val)) {
+            values.push(val);
+            this.props.onChange(values);
+            this.renderBadges(badgeContainer, values, nameToTitleMap);
+          }
+          select.value = '';
+        };
+        el.appendChild(badgeContainer);
+        el.appendChild(select);
+      } else {
+        const input = document.createElement('input');
+        input.placeholder = "添加标签...";
+        input.style = "border:none; outline:none; flex:1; height:30px; padding:0 8px; font-size:14px; min-width:120px;";
+        
+        input.onkeydown = (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            const val = input.value.trim();
+            if (val && !values.includes(val)) {
+              values.push(val);
+              this.props.onChange(values);
+              this.renderBadges(badgeContainer, values, {});
+            }
+            input.value = '';
+          }
+        };
+        el.appendChild(badgeContainer);
+        el.appendChild(input);
+      }
+      this.renderBadges(badgeContainer, values, nameToTitleMap);
+    }
+  });
+
+  CMS.registerWidget('native-category', createMultiSelectWidget(true));
+  CMS.registerWidget('native-tags', createMultiSelectWidget(false));
+</script>
 </body>
 </html>
