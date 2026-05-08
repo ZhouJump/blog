@@ -1,16 +1,17 @@
 ---
 title: A CSS-Only Scroll-Driven Animation Effect
-description: Using sticky and animation-timeline to achieve element-fixed scroll-driven animations
+description: Using sticky and animation-timeline to achieve element-fixed
+  scroll-driven animations
+categories:
+  - technology
+  - CSS
+tags:
+  - HTML
+  - CSS
 slug: animation-timeline
 date: 2025-09-14 00:00:00+0000
-image: cover.en.webp
-categories:
-    - technology
-    - CSS
-tags:
-    - HTML
-    - CSS
 weight: 1
+image: cover.en.webp
 ---
 > This article is published on my personal website, original link: [A CSS-Only Scroll-Driven Animation Effect](https://blog.zhoujump.club/p/animation-timeline/)
 ## First, let's look at this simple example

@@ -1,16 +1,17 @@
 ---
 title: 记录一个纯CSS实现滚动驱动动画的效果
 description: 使用sticky与animation-timeline实现元素固定的滚动驱动动画
+categories:
+  - technology
+  - CSS
+  - HTML
+tags:
+  - HTML
+  - CSS
 slug: animation-timeline
 date: 2025-09-14 00:00:00+0000
-image: cover.zh-cn.webp
-categories:
-    - technology
-    - CSS
-tags:
-    - HTML
-    - CSS
 weight: 1
+image: cover.zh-cn.webp
 ---
 > 文章在个人网站中发布，原文链接：[记录一个纯CSS实现滚动驱动动画的效果](https://blog.zhoujump.club/p/animation-timeline/)
 ## 先看一下这个简单的案例
