@@ -1,2 +1,4 @@
 github.com/CaiJimmy/hugo-theme-stack/v3 v3.30.0 h1:uITC7EKGyfPjyi3C5At++E0Uu1qQXtqiwMV4pd7LkLs=
 github.com/CaiJimmy/hugo-theme-stack/v3 v3.30.0/go.mod h1:IPmCXiIxlFSLFYS0tOmYP6ySLviyeNVSabyvSuaxD+I=
+github.com/gethugothemes/hugo-modules/llms-txt v0.0.0-20260514051712-1e119c418ea0 h1:baTSkRJcsfbkWvlHR1O1ZPspdBULMe67GbSXFJ+vMME=
+github.com/gethugothemes/hugo-modules/llms-txt v0.0.0-20260514051712-1e119c418ea0/go.mod h1:NbshvI0tQlvBA7ZZrP8kik0M6g3b0Gr0ftEP3NV+9os=

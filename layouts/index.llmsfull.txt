@@ -1,0 +1,11 @@
+# {{ .Site.Title }} - 完整内容打包
+
+{{ range .Site.RegularPages }}
+--------------------------------------------------------------------------------
+title: "{{ .Title }}"
+url: "{{ .Permalink | relURL }}index.md"
+description: "{{ .Description | default .Summary }}"
+--------------------------------------------------------------------------------
+{{ .RawContent }}
+
+{{ end }}

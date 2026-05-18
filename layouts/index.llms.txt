@@ -1,0 +1,8 @@
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description | default "欢迎来到我的网站" }}
+
+## 页面列表
+{{ range .Site.RegularPages }}
+- [{{ .Title }}]({{ .Permalink | relURL }}index.md): {{ .Description | default .Summary }}
+{{- end }}

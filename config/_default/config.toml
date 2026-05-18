@@ -15,3 +15,26 @@ hasCJKLanguage = true
 # Change it to your Disqus shortname before using
 disqusShortname = "zhous-blog"
 
+[outputs]
+  home     = ["HTML", "RSS", "llms", "llmsfull", "md"]
+  page     = ["HTML", "md"]
+  section  = ["HTML", "RSS", "md"]
+  taxonomy = ["HTML", "RSS", "md"]
+  term     = ["HTML", "RSS", "md"]
+
+[outputFormats.llms]
+  baseName = "llms"
+  isPlainText = true
+  mediaType = "text/plain"
+  notAlternative = true
+
+[outputFormats.llmsfull]
+  baseName = "llms-full"
+  isPlainText = true
+  mediaType = "text/plain"
+  notAlternative = true
+
+[outputFormats.md]
+  baseName = "index"
+  isPlainText = true
+  mediaType = "text/markdown"
