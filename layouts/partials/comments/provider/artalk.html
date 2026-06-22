@@ -11,7 +11,7 @@
 </style>
 
 {{- with .Site.Params.comments.artalk -}}
-{{- $config := dict "el" "#artalk" "pageKey" $.RelPermalink "darkMode" "auto" -}}
+{{- $config := dict "el" "#artalk" "pageKey" $.RelPermalink -}}
 {{- $replaceKeys := dict "lang" "locale" -}}
 
 {{- range $key, $val := . -}}
@@ -24,6 +24,16 @@
 {{- end -}}
 
 <script>
-    Artalk.init({{ $config | jsonify | safeJS }});
+    (function() {
+        const artalk = Artalk.init({{ $config | jsonify | safeJS }});
+
+        function setArtalkDarkMode() {
+            const isDark = document.documentElement.dataset.scheme === 'dark';
+            artalk.setDarkMode(isDark);
+        }
+
+        setArtalkDarkMode();
+        window.addEventListener('onColorSchemeChange', setArtalkDarkMode);
+    })();
 </script>
 {{- end -}}
