@@ -77,7 +77,7 @@ enabled = false
 ## Comments
 [comments]
 enabled = true
-provider = "waline"
+provider = "artalk"
 
 [comments.disqusjs]
 shortname = ""
@@ -115,6 +115,11 @@ requiredMeta = ['nick']
 
 [comments.waline.locale]
 admin = "Admin"
+
+[comments.artalk]
+server = "https://comments.zhoujump.club"
+site = "粥粥个人博客"
+lang = "zh-CN"
 
 [comments.twikoo]
 envId = ""

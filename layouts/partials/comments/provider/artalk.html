@@ -1,0 +1,29 @@
+<script src="/lib/artalk/Artalk.js"></script>
+<link href="/lib/artalk/Artalk.css" rel="stylesheet" />
+<div id="artalk" class="artalk-container"></div>
+<style>
+    .artalk-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+{{- with .Site.Params.comments.artalk -}}
+{{- $config := dict "el" "#artalk" "pageKey" $.RelPermalink "darkMode" "auto" -}}
+{{- $replaceKeys := dict "lang" "locale" -}}
+
+{{- range $key, $val := . -}}
+    {{- if ne $val nil -}}
+        {{- $replaceKey := index $replaceKeys $key -}}
+        {{- $k := default $key $replaceKey -}}
+
+        {{- $config = merge $config (dict $k $val) -}}
+    {{- end -}}
+{{- end -}}
+
+<script>
+    Artalk.init({{ $config | jsonify | safeJS }});
+</script>
+{{- end -}}
