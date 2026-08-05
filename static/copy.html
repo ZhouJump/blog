@@ -152,22 +152,22 @@
 
 <div class="container">
   <h1>HTML 代码 ➔ RTF 剪贴板转换器</h1>
-  <p class="subtitle">自动识别剪贴板中的纯文本 HTML 源码，将其解析并转换为 RTF 格式写回剪贴板</p>
+  <p.subtitle>自动识别剪贴板中的纯文本 HTML 源码，将其解析并转换为 RTF 格式写回剪贴板</p>
 
-  <button id="convertBtn" class="btn">读取并转换剪贴板</button>
+    <button id="convertBtn" class="btn">读取并转换剪贴板</button>
 
-  <div id="statusMsg" class="status"></div>
+    <div id="statusMsg" class="status"></div>
 
-  <div class="preview-grid">
-    <div class="preview-box">
-      <h2>HTML 渲染预览</h2>
-      <div id="htmlPreview" class="html-render">等待读取...</div>
+    <div class="preview-grid">
+      <div class="preview-box">
+        <h2>HTML 渲染预览</h2>
+        <div id="htmlPreview" class="html-render">等待读取...</div>
+      </div>
+      <div class="preview-box">
+        <h2>生成 RTF 源码</h2>
+        <pre id="rtfPreview">等待转换...</pre>
+      </div>
     </div>
-    <div class="preview-box">
-      <h2>生成 RTF 源码</h2>
-      <pre id="rtfPreview">等待转换...</pre>
-    </div>
-  </div>
 </div>
 
 <script>
@@ -271,63 +271,59 @@
 
       let rawHtml = '';
 
-      // 尝试读取剪贴板
+      // 1. 读取剪贴板内容
       if (navigator.clipboard.read) {
         const items = await navigator.clipboard.read();
         for (const item of items) {
-          // 1. 如果有标准的 text/html 格式优先取
           if (item.types.includes('text/html')) {
             const blob = await item.getType('text/html');
             rawHtml = await blob.text();
             break;
-          }
-          // 2. 如果只有 text/plain，直接读取纯文本 (假设它是 HTML 代码)
-          else if (item.types.includes('text/plain')) {
+          } else if (item.types.includes('text/plain')) {
             const blob = await item.getType('text/plain');
             rawHtml = await blob.text();
             break;
           }
         }
       } else {
-        // 备用兜底逻辑
         rawHtml = await navigator.clipboard.readText();
       }
 
       if (!rawHtml.trim()) {
-        showStatus('错误：剪贴板为空！', 'error');
+        showStatus('错误：剪贴板内容为空！', 'error');
         return;
       }
 
-      // 渲染预览
+      // 2. 解析与预览
       htmlPreview.innerHTML = rawHtml;
-
-      // 转换为 RTF
       const rtfText = convertHtmlToRtf(rawHtml);
       rtfPreview.textContent = rtfText;
 
-      // 提取纯文本作降级
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = rawHtml;
       const plainText = tempDiv.textContent || tempDiv.innerText || '';
 
-      // 构建写入剪贴板的对象集合
-      const clipboardPayload = {
-        'text/rtf': new Blob([rtfText], { type: 'text/rtf' }),
-        'text/plain': new Blob([plainText], { type: 'text/plain' })
+      // 3. 通过拦截 copy 事件写入任意非标准 MIME（包含 text/rtf）
+      const handleCopy = (e) => {
+        e.preventDefault();
+        e.clipboardData.setData('text/rtf', rtfText);
+        e.clipboardData.setData('text/html', rawHtml);
+        e.clipboardData.setData('text/plain', plainText);
+        document.removeEventListener('copy', handleCopy);
       };
 
-      // 如果原本是文本形式的 HTML，写回时也顺便补全真正的 text/html 格式
-      clipboardPayload['text/html'] = new Blob([rawHtml], { type: 'text/html' });
+      document.addEventListener('copy', handleCopy);
+      const successful = document.execCommand('copy');
 
-      await navigator.clipboard.write([
-        new ClipboardItem(clipboardPayload)
-      ]);
-
-      showStatus('转换成功！已将文本形式的 HTML 解析为 RTF 并放回剪贴板。', 'success');
+      if (successful) {
+        showStatus('转换成功！RTF、HTML 和 Plain Text 数据已完美注入剪贴板。', 'success');
+      } else {
+        throw new Error('执行 execCommand("copy") 失败');
+      }
 
     } catch (err) {
       console.error(err);
-      showStatus(`操作失败: ${err.message || '未获得剪贴板读写权限。'}`, 'error');
+      showStatus(`操作失败: ${err.message || '系统限制或未提供剪贴板权限。'}`, 'error');
     }
   });
 </script>
