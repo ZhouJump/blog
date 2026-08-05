@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML to RTF Clipboard Converter</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --danger: #f43f5e;
+      --success: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+    .container {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 100%;
+      max-width: 800px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      background-color: var(--accent);
+      color: #0f172a;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .status {
+      font-size: 0.875rem;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      display: none;
+    }
+
+    .status.info {
+      background-color: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      display: block;
+    }
+
+    .status.success {
+      background-color: rgba(16, 185, 129, 0.1);
+      border: 1px solid var(--success);
+      color: var(--success);
+      display: block;
+    }
+
+    .status.error {
+      background-color: rgba(244, 63, 94, 0.1);
+      border: 1px solid var(--danger);
+      color: var(--danger);
+      display: block;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      .preview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .preview-box {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .preview-box h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    pre, .html-render {
+      font-size: 0.8125rem;
+      height: 220px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .html-render {
+      background: #ffffff;
+      color: #000000;
+      padding: 0.5rem;
+      border-radius: 2px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>HTML ➔ RTF 剪贴板转换器</h1>
+    <p class="subtitle">读取剪贴板中的 text/html，转化为 RTF 并同时写入 text/rtf 和 text/plain</p>
+
+    <button id="convertBtn" class="btn">读取剪贴板并转换</button>
+
+    <div id="statusMsg" class="status"></div>
+
+    <div class="preview-grid">
+      <div class="preview-box">
+        <h2>HTML 输入预览</h2>
+        <div id="htmlPreview" class="html-render">等待读取剪贴板...</div>
+      </div>
+      <div class="preview-box">
+        <h2>生成的 RTF 源码</h2>
+        <pre id="rtfPreview">等待转换...</pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 轻量级 HTML 转 RTF 转换引擎
+    function convertHtmlToRtf(htmlStr) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(htmlStr, 'text/html');
+
+      let rtfBody = '';
+
+      function parseNode(node) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          let text = node.nodeValue;
+          // 处理 RTF 转义字符
+          text = text.replace(/\\/g, '\\\\')
+                     .replace(/\{/g, '\\{')
+                     .replace(/\}/g, '\\}');
+          // 处理 Unicode 编码
+          let unicodeText = '';
+          for (let i = 0; i < text.length; i++) {
+            const charCode = text.charCodeAt(i);
+            if (charCode > 127) {
+              unicodeText += `\\u${charCode > 32767 ? charCode - 65536 : charCode}?`;
+            } else {
+              unicodeText += text[i];
+            }
+          }
+          return unicodeText;
+        }
+
+        if (node.nodeType !== Node.ELEMENT_NODE) return '';
+
+        let prefix = '';
+        let suffix = '';
+        const tag = node.tagName.toLowerCase();
+
+        switch (tag) {
+          case 'b':
+          case 'strong':
+            prefix = '\\b ';
+            suffix = '\\b0 ';
+            break;
+          case 'i':
+          case 'em':
+            prefix = '\\i ';
+            suffix = '\\i0 ';
+            break;
+          case 'u':
+            prefix = '\\ul ';
+            suffix = '\\ulnone ';
+            break;
+          case 's':
+          case 'strike':
+          case 'del':
+            prefix = '\\strike ';
+            suffix = '\\strike0 ';
+            break;
+          case 'p':
+          case 'div':
+            suffix = '\\par\n';
+            break;
+          case 'br':
+            return '\\line\n';
+          case 'h1':
+            prefix = '\\fs36\\b ';
+            suffix = '\\b0\\fs24\\par\n';
+            break;
+          case 'h2':
+            prefix = '\\fs28\\b ';
+            suffix = '\\b0\\fs24\\par\n';
+            break;
+          case 'li':
+            prefix = '\\bullet ';
+            suffix = '\\par\n';
+            break;
+        }
+
+        let childContent = '';
+        for (const child of node.childNodes) {
+          childContent += parseNode(child);
+        }
+
+        return prefix + childContent + suffix;
+      }
+
+      rtfBody = parseNode(doc.body);
+
+      // 构建标准 RTF 文件头
+      const rtfHeader = '{\\rtf1\\ansi\\ansicpg936\\uc1\\deff0{\\fonttbl{\\f0\\fnil\\fcharset134 System;}}\n\\f0\\fs24 ';
+      const rtfFooter = '}';
+
+      return rtfHeader + rtfBody + rtfFooter;
+    }
+
+    const convertBtn = document.getElementById('convertBtn');
+    const statusMsg = document.getElementById('statusMsg');
+    const htmlPreview = document.getElementById('htmlPreview');
+    const rtfPreview = document.getElementById('rtfPreview');
+
+    function showStatus(text, type) {
+      statusMsg.textContent = text;
+      statusMsg.className = `status ${type}`;
+    }
+
+    convertBtn.addEventListener('click', async () => {
+      try {
+        showStatus('正在读取剪贴板...', 'info');
+
+        // 1. 读取剪贴板数据项
+        const clipboardItems = await navigator.clipboard.read();
+        let htmlText = '';
+
+        for (const item of clipboardItems) {
+          if (item.types.includes('text/html')) {
+            const blob = await item.getType('text/html');
+            htmlText = await blob.text();
+            break;
+          }
+        }
+
+        if (!htmlText) {
+          showStatus('失败：当前剪贴板中未检测到 HTML/富文本 内容！', 'error');
+          htmlPreview.textContent = '无 HTML 数据';
+          rtfPreview.textContent = '';
+          return;
+        }
+
+        // 预览原始 HTML
+        htmlPreview.innerHTML = htmlText;
+
+        // 2. 转换 HTML 为 RTF
+        const rtfText = convertHtmlToRtf(htmlText);
+        rtfPreview.textContent = rtfText;
+
+        // 提炼纯文本作为降级保障
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = htmlText;
+        const plainText = tempDiv.textContent || tempDiv.innerText || '';
+
+        // 3. 将 RTF 写回剪贴板 (同时带上 text/rtf 与 text/plain)
+        const rtfBlob = new Blob([rtfText], { type: 'text/rtf' });
+        const plainBlob = new Blob([plainText], { type: 'text/plain' });
+
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            'text/rtf': rtfBlob,
+            'text/plain': plainBlob
+          })
+        ]);
+
+        showStatus('成功！已将 HTML 转换为 RTF 并放回剪贴板。现在可以粘贴到 Word 或 RTF 接收方。', 'success');
+
+      } catch (err) {
+        console.error(err);
+        showStatus(`错误: ${err.message || '读取/写入剪贴板被拒绝。请确保赋予了剪贴板权限。'}`, 'error');
+      }
+    });
+  </script>
+</body>
+</html>
