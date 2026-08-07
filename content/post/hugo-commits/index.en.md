@@ -22,7 +22,7 @@ weight: 1
 ## Deploy waline
 
 This part is introduced in detail on the waline official website. We only need to do **Vercel deployment (server)**. Friends who have purchased domain names can do one more step. After completing the deployment, you can return to this article to continue configuration.
-[Click to go to waline tutorial](http://u5a.cn/OdUZ7/)
+[Click to go to waline tutorial](https://waline.js.org/guide/deploy/vercel.html)
 >If you have difficulty accessing vercel, please use magic Internet.
 
 ![Just do this step](1-1.webp)
