@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优惠券领取</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsencrypt@3.3.2/bin/jsencrypt.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px 32px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .form-group input[type="text"] {
+            width: 100%;
+            height: 44px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 0 12px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .form-group input[type="text"]:focus {
+            border-color: #667eea;
+        }
+
+        .slider-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .slider-group input[type="range"] {
+            flex: 1;
+            height: 6px;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #e0e0e0;
+            border-radius: 3px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .slider-group input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #667eea;
+            cursor: pointer;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-value {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            background: #667eea;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            width: 100%;
+            height: 48px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .log-area {
+            margin-top: 24px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 16px;
+            max-height: 260px;
+            overflow-y: auto;
+            font-size: 13px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            color: #333;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .log-area.show {
+            display: block;
+        }
+
+        .log-item {
+            padding: 4px 0;
+            border-bottom: 1px solid #e8e8e8;
+            word-break: break-all;
+        }
+
+        .log-item.success {
+            color: #2e7d32;
+        }
+
+        .log-item.error {
+            color: #c62828;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            margin-top: 16px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .progress-bar.show {
+            display: block;
+        }
+
+        .progress-bar-inner {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+            transition: width 0.3s;
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🎁 优惠券领取</h1>
+
+        <div class="form-group">
+            <label for="inviteCode">邀请码</label>
+            <input type="text" id="inviteCode" placeholder="请输入邀请码" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+            <label for="countSlider">领取份数</label>
+            <div class="slider-group">
+                <input type="range" id="countSlider" min="1" max="10" value="1" step="1">
+                <span class="slider-value" id="countDisplay">1</span>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" id="submitBtn">领 取</button>
+
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-bar-inner" id="progressBarInner"></div>
+        </div>
+
+        <div class="log-area" id="logArea"></div>
+    </div>
+
+    <script>
+        (function () {
+            // ============================================================
+            // ⚠️ 请在此处填写 RSA 公钥（PEM 格式）
+            // 示例格式：-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----
+            // ============================================================
+            const RSA_PUBLIC_KEY = `-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCuyZxd4GCkDui/XXxw8k/YoSUK5gDwbVdPtl9FkUvpWD7IgxP3iU+OOuivp9a30C/VWsialCVlQoGIgCdZwydvFirRqguUkbgvfDuOW1JaH7LYC3qb4+h/YDxX6Ulf1IbvJYiKViFeDizGSfc4MhbZsRhqW7vyoXhDc/HO6ZaTWQIDAQAB-----END PUBLIC KEY-----`;
+
+            const API_URL = 'https://app.exiaokou.cn/api/mobile/power/user_reg';
+            const INTERVAL_MS = 1500; // 每次请求间隔（毫秒）
+
+            // DOM 元素
+            const inviteCodeInput = document.getElementById('inviteCode');
+            const countSlider = document.getElementById('countSlider');
+            const countDisplay = document.getElementById('countDisplay');
+            const submitBtn = document.getElementById('submitBtn');
+            const logArea = document.getElementById('logArea');
+            const progressBar = document.getElementById('progressBar');
+            const progressBarInner = document.getElementById('progressBarInner');
+
+            // 滑块值显示
+            countSlider.addEventListener('input', function () {
+                countDisplay.textContent = this.value;
+            });
+
+            // 生成随机手机号（国内格式）
+            function randomPhoneNumber() {
+                const prefixes = [
+                    '130', '131', '132', '133', '134', '135', '136', '137', '138', '139',
+                    '150', '151', '152', '153', '155', '156', '157', '158', '159',
+                    '170', '171', '172', '173', '174', '175', '176', '177', '178', '179',
+                    '180', '181', '182', '183', '184', '185', '186', '187', '188', '189',
+                    '190', '191', '192', '193', '195', '196', '197', '198', '199'
+                ];
+                const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+                let suffix = '';
+                for (let i = 0; i < 8; i++) {
+                    suffix += Math.floor(Math.random() * 10);
+                }
+                return prefix + suffix;
+            }
+
+            // 生成随机字符串
+            function randomString(length) {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                let result = '';
+                for (let i = 0; i < length; i++) {
+                    result += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                return result;
+            }
+
+            // 计算密码：随机字符串 + 当前 Unix 时间戳（秒）→ RSA 加密 → Base64
+            function computePassword() {
+                const raw = randomString(12) + Math.floor(Date.now() / 1000);
+                const encrypt = new JSEncrypt();
+                encrypt.setPublicKey(RSA_PUBLIC_KEY);
+                const encrypted = encrypt.encrypt(raw);
+                if (!encrypted) {
+                    throw new Error('RSA 加密失败，请检查公钥是否正确');
+                }
+                return encrypted; // JSEncrypt.encrypt 返回的就是 Base64
+            }
+
+            // 写日志
+            function addLog(message, type) {
+                const div = document.createElement('div');
+                div.className = 'log-item ' + (type || '');
+                div.textContent = '[' + new Date().toLocaleTimeString() + '] ' + message;
+                logArea.appendChild(div);
+                logArea.scrollTop = logArea.scrollHeight;
+                logArea.classList.add('show');
+            }
+
+            // 发起单次请求
+            function sendRequest(inviteCode, index) {
+                const username = randomPhoneNumber();
+                const password = computePassword();
+
+                const params = new URLSearchParams();
+                params.append('username', username);
+                params.append('quhao', '86');
+                params.append('tshare', inviteCode);
+                params.append('password', password);
+
+                addLog('第 ' + index + ' 次请求 | 手机号: ' + username + ' | 发起中...');
+
+                return fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                    },
+                    body: params.toString()
+                })
+                .then(function (response) {
+                    return response.text().then(function (text) {
+                        try {
+                            return JSON.parse(text);
+                        } catch (e) {
+                            return text;
+                        }
+                    });
+                })
+                .then(function (data) {
+                    const resultStr = typeof data === 'object' ? JSON.stringify(data) : data;
+                    addLog('第 ' + index + ' 次请求 | 响应: ' + resultStr, 'success');
+                    return data;
+                })
+                .catch(function (err) {
+                    addLog('第 ' + index + ' 次请求 | 失败: ' + err.message, 'error');
+                    throw err;
+                });
+            }
+
+            // 延迟函数
+            function delay(ms) {
+                return new Promise(function (resolve) {
+                    setTimeout(resolve, ms);
+                });
+            }
+
+            // 主流程
+            submitBtn.addEventListener('click', async function () {
+                const inviteCode = inviteCodeInput.value.trim();
+                if (!inviteCode) {
+                    alert('请输入邀请码');
+                    inviteCodeInput.focus();
+                    return;
+                }
+
+                const totalCount = parseInt(countSlider.value, 10);
+
+                // 禁用按钮
+                submitBtn.disabled = true;
+                submitBtn.textContent = '领取中...';
+                logArea.innerHTML = '';
+                logArea.classList.add('show');
+                progressBar.classList.add('show');
+                progressBarInner.style.width = '0%';
+
+                addLog('开始领取，共 ' + totalCount + ' 份');
+
+                for (let i = 1; i <= totalCount; i++) {
+                    try {
+                        await sendRequest(inviteCode, i);
+                    } catch (e) {
+                        // 错误已在 sendRequest 中记录
+                    }
+
+                    // 更新进度条
+                    progressBarInner.style.width = (i / totalCount * 100) + '%';
+
+                    // 最后一次请求后不需要等待
+                    if (i < totalCount) {
+                        await delay(INTERVAL_MS);
+                    }
+                }
+
+                addLog('全部完成！共执行 ' + totalCount + ' 次请求');
+                submitBtn.disabled = false;
+                submitBtn.textContent = '领 取';
+            });
+        })();
+    </script>
+</body>
+</html>
