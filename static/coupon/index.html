@@ -66,6 +66,36 @@
             border-color: #667eea;
         }
 
+        .form-group select {
+            width: 100%;
+            height: 44px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 0 12px;
+            font-size: 16px;
+            background: #fff;
+            transition: border-color 0.3s;
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+
+        .form-group select:focus {
+            border-color: #667eea;
+        }
+
+        .custom-url-wrap {
+            display: none;
+        }
+
+        .custom-url-wrap.show {
+            display: block;
+        }
+
         .slider-group {
             display: flex;
             align-items: center;
@@ -181,6 +211,18 @@
         </div>
 
         <div class="form-group">
+            <label for="apiSelect">接口选择</label>
+            <select id="apiSelect">
+                <option value="exiaokou">忆小口</option>
+                <option value="junyue">餐点点</option>
+                <option value="custom">手动输入</option>
+            </select>
+            <div class="custom-url-wrap" id="customUrlWrap" style="margin-top: 12px;">
+                <input type="text" id="customUrl" placeholder="请输入自定义接口地址" autocomplete="off">
+            </div>
+        </div>
+
+        <div class="form-group">
             <label for="countSlider">领取份数</label>
             <div class="slider-group">
                 <input type="range" id="countSlider" min="1" max="10" value="1" step="1">
@@ -205,17 +247,65 @@
             // ============================================================
             const RSA_PUBLIC_KEY = `-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCuyZxd4GCkDui/XXxw8k/YoSUK5gDwbVdPtl9FkUvpWD7IgxP3iU+OOuivp9a30C/VWsialCVlQoGIgCdZwydvFirRqguUkbgvfDuOW1JaH7LYC3qb4+h/YDxX6Ulf1IbvJYiKViFeDizGSfc4MhbZsRhqW7vyoXhDc/HO6ZaTWQIDAQAB-----END PUBLIC KEY-----`;
 
-            const API_URL = 'https://app.exiaokou.cn/api/mobile/power/user_reg';
+            const API_MAP = {
+                exiaokou: 'https://app.exiaokou.cn/api/mobile/power/user_reg',
+                junyue: 'https://app.junyuektv.cn/api/mobile/power/user_reg'
+            };
+
             const INTERVAL_MS = 800; // 每次请求间隔（毫秒）
 
             // DOM 元素
             const inviteCodeInput = document.getElementById('inviteCode');
+            const apiSelect = document.getElementById('apiSelect');
+            const customUrlWrap = document.getElementById('customUrlWrap');
+            const customUrlInput = document.getElementById('customUrl');
             const countSlider = document.getElementById('countSlider');
             const countDisplay = document.getElementById('countDisplay');
             const submitBtn = document.getElementById('submitBtn');
             const progressBar = document.getElementById('progressBar');
             const progressBarInner = document.getElementById('progressBarInner');
             const progressText = document.getElementById('progressText');
+
+            // 获取当前 API URL
+            function getApiUrl() {
+                var selected = apiSelect.value;
+                if (selected === 'custom') {
+                    return customUrlInput.value.trim();
+                }
+                return API_MAP[selected] || '';
+            }
+
+            // 接口选择持久化
+            const STORAGE_API = 'coupon_api_select';
+            const STORAGE_CUSTOM_URL = 'coupon_custom_url';
+            var savedApi = localStorage.getItem(STORAGE_API);
+            if (savedApi) {
+                apiSelect.value = savedApi;
+            }
+            if (apiSelect.value === 'custom') {
+                customUrlWrap.classList.add('show');
+                var savedCustomUrl = localStorage.getItem(STORAGE_CUSTOM_URL);
+                if (savedCustomUrl) {
+                    customUrlInput.value = savedCustomUrl;
+                }
+            }
+
+            apiSelect.addEventListener('change', function () {
+                localStorage.setItem(STORAGE_API, this.value);
+                if (this.value === 'custom') {
+                    customUrlWrap.classList.add('show');
+                    var savedCustomUrl = localStorage.getItem(STORAGE_CUSTOM_URL);
+                    if (savedCustomUrl) {
+                        customUrlInput.value = savedCustomUrl;
+                    }
+                } else {
+                    customUrlWrap.classList.remove('show');
+                }
+            });
+
+            customUrlInput.addEventListener('input', function () {
+                localStorage.setItem(STORAGE_CUSTOM_URL, this.value);
+            });
 
             // 滑块值显示
             countSlider.addEventListener('input', function () {
@@ -282,7 +372,7 @@
                 params.append('tshare', inviteCode);
                 params.append('password', password);
 
-                return fetch(API_URL, {
+                return fetch(getApiUrl(), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -319,6 +409,13 @@
                 if (!inviteCode) {
                     alert('请输入邀请码');
                     inviteCodeInput.focus();
+                    return;
+                }
+
+                var apiUrl = getApiUrl();
+                if (!apiUrl) {
+                    alert('请输入自定义接口地址');
+                    customUrlInput.focus();
                     return;
                 }
 
