@@ -12,7 +12,7 @@ tags:
     - HTML
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[纯CSS实现一个炫酷的输入框效果](https://blog.zhoujump.club/p/valid-input/)
+> 文章在个人网站中发布，原文链接：[纯CSS实现一个炫酷的输入框效果](https://blog.zhoujump.com/p/valid-input/)
 
 ## 先看效果
 
@@ -67,7 +67,7 @@ weight: 1
 这两个伪类可以用于`input`元素和`select`元素，用于选中校验通过和未校验通过的输入框。我们通过下边这个简单的小案例了解一下它们：  
 这个输入框会校验输入是否是个电子邮箱地址，否则背景颜色将红色警告。
 
-<input value="x@zhoujump.club" class="demo-input-2" type="email"/>
+<input value="x@zhoujump.com" class="demo-input-2" type="email"/>
 <style>
 	.demo-input-2:invalid{background:red}
 </style>

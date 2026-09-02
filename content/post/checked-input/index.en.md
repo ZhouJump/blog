@@ -12,7 +12,7 @@ tags:
 - HTML
 weight: 1
 ---
-> Original article: [Pure CSS to implement the edit and save buttons of the input box](https://blog.zhoujump.club/en/p/checked_input/)
+> Original article: [Pure CSS to implement the edit and save buttons of the input box](https://blog.zhoujump.com/en/p/checked_input/)
 
 ## See the effect first
 Click the `Edit` on the right to activate the input on the left, and click the `Finish` on the right to save the input box content
@@ -35,16 +35,16 @@ padding: 10px; transition: all .3s; } .s-box:hover{ box-shadow: 0 0 10px #ddd; t
 We all know that the disabled attribute in `<input disabled="true"/>` can be used to make the input box uneditable, but as an element attribute, it needs to be modified using js. So how do we achieve this in a pure CSS environment?
 The answer is to use the `pointer-events` attribute, which is used to define how an element responds to user clicks. For example, the following two examples:
 
-<a style="pointer-events: auto;" href='https://blog.zhoujump.club' target="_blank">pointer-events: auto</a><br/>
-<a style="pointer-events: none;" href='https://blog.zhoujump.club' target="_blank">pointer-events: none</a>
+<a style="pointer-events: auto;" href='https://blog.zhoujump.com' target="_blank">pointer-events: auto</a><br/>
+<a style="pointer-events: none;" href='https://blog.zhoujump.com' target="_blank">pointer-events: none</a>
 ```html
 <!-- This a tag sets pointer-events: auto -->
 <a style="pointer-events: auto;"
-href='https://blog.zhoujump.club'
+href='https://blog.zhoujump.com'
 target="_blank">pointer-events: auto</a>
 <!-- This a tag sets pointer-events: auto -->
 <a style="pointer-events: none;"
-href='https://blog.zhoujump.club'
+href='https://blog.zhoujump.com'
 target="_blank">pointer-events: none</a>
 ```
 In this example, the a tag with `pointer-events: none` cannot be clicked, while the a tag with `pointer-events: auto` can be clicked normally. We can use this method to achieve the effect of disabling the input box.

@@ -1,5 +1,5 @@
 # Change baseurl before deploy
-baseurl = "https://blog.zhoujump.club/"
+baseurl = "https://blog.zhoujump.com/"
 languageCode = "zh-cn"
 pagination.pagerSize = 5
 title = "粥粥个人博客"

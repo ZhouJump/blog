@@ -13,7 +13,7 @@ tags:
 weight: 1
 ---
 
-> This article is published on my personal website, original link: [Two-way data binding of contenteditable elements in Vue](https://blog.zhoujump.club/en/p/contenteditable-vue/)
+> This article is published on my personal website, original link: [Two-way data binding of contenteditable elements in Vue](https://blog.zhoujump.com/en/p/contenteditable-vue/)
 
 A record of what to pay attention to when using the contenteditable attribute in Vue.
 ## contenteditable

@@ -11,7 +11,7 @@ tags:
     - Nuxt
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[Nuxt学习之旅1](https://blog.zhoujump.club/p/learn-nuxt-1/)
+> 文章在个人网站中发布，原文链接：[Nuxt学习之旅1](https://blog.zhoujump.com/p/learn-nuxt-1/)
 
 ## 前言  
 

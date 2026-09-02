@@ -12,11 +12,11 @@ tags:
 - personal project
 weight: 1
 ---
-> Original article: [My resume editor is online](https://blog.zhoujump.club/en/p/resume-tool-index/)
+> Original article: [My resume editor is online](https://blog.zhoujump.com/en/p/resume-tool-index/)
 
 Drag and drop layout, with two sets of simple and beautiful themes. You can export the resume as an image or call the print function. Free to use, no login required. Welcome to use it.
 
-<a target="_blank" href="https://resume.zhoujump.club/">
+<a target="_blank" href="https://resume.zhoujump.com/">
 <div class="enter-button">Enter now</div>
 </a>
 <style>

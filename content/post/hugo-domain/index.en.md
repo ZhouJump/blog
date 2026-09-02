@@ -14,7 +14,7 @@ tags:
 weight: 1
 ---
 
-> Original article: [HUGO, domain name!](https://blog.zhoujump.club/en/p/hugo-domain/)
+> Original article: [HUGO, domain name!](https://blog.zhoujump.com/en/p/hugo-domain/)
 
 >Foreword: This article continues the previous article and talks about how to buy a domain name and then bind our web page to it.
 >[Read previous articles](/tags/hugo/)
@@ -46,7 +46,7 @@ Return to Deployment>pages and click the **New Domain** button
 ![Click the New Domain button](2-1.webp)
 
 Enter a subdomain of the domain you purchased, and then click **Create New Domain**
->I purchased `zhoujump.club`, which is called a root domain. For example, domains like `www.zhoujump.club` and `blog.zhoujump.club` are subdomains, and you can name them whatever you want. Of course, you can also use the root domain, but you may encounter trouble in the next step.
+>I purchased `zhoujump.com`, which is called a root domain. For example, domains like `www.zhoujump.com` and `blog.zhoujump.com` are subdomains, and you can name them whatever you want. Of course, you can also use the root domain, but you may encounter trouble in the next step.
 
 ![Create New Domain](2-2.webp)
 

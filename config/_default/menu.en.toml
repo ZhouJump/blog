@@ -42,7 +42,7 @@ icon = "brand-email"
 [[social]]
 identifier = "rss"
 name = "Subscribe to RSS"
-url = "https://blog.zhoujump.club/en/index.xml"
+url = "https://blog.zhoujump.com/en/index.xml"
 
 [social.params]
 icon = "brand-rss"

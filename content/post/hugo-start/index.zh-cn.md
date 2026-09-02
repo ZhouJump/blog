@@ -12,7 +12,7 @@ tags:
     - gitlab
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[HUGO，启动！](https://blog.zhoujump.club/p/hugo-start/)
+> 文章在个人网站中发布，原文链接：[HUGO，启动！](https://blog.zhoujump.com/p/hugo-start/)
 
 >前言：本文章将光速教会你如何启动一个hugo项目，并且将其免费托管至gitlab pages以供所有人访问，就像你现在看到的这个网站一样。
 ## 准备账号

@@ -12,7 +12,7 @@ tags:
     - CSS
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[巧用属性选择器纯CSS实现筛选器](https://blog.zhoujump.club/p/checkbox-filter/)
+> 文章在个人网站中发布，原文链接：[巧用属性选择器纯CSS实现筛选器](https://blog.zhoujump.com/p/checkbox-filter/)
 
 ## 先看看这个样例的效果
 <div class="filter">

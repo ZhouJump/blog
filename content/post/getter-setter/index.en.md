@@ -10,7 +10,7 @@ tags:
 - Javascript
 weight: 1
 ---
-> Original article: [Write a Tiny Vue - Getter and Setter](https://blog.zhoujump.club/en/p/getter-setter/)
+> Original article: [Write a Tiny Vue - Getter and Setter](https://blog.zhoujump.com/en/p/getter-setter/)
 
 I believe that all the front-end experts and novices have heard this statement:
 > Vue 2 uses getters and setters to control data, while Vue 3 directly uses proxy. 

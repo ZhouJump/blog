@@ -12,7 +12,7 @@ tags:
     - HTML
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[在vue中contenteditable元素的双向数据绑定](https://blog.zhoujump.club/p/contenteditable-vue/)  
+> 文章在个人网站中发布，原文链接：[在vue中contenteditable元素的双向数据绑定](https://blog.zhoujump.com/p/contenteditable-vue/)  
 
 记录一下在vue中使用contenteditable属性所需要注意的地方。
 ## contenteditable

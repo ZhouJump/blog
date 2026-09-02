@@ -14,7 +14,7 @@ tags:
 weight: 1
 ---
 
-> Original article: [How to embed UnityWeb3D into a page](https://blog.zhoujump.club/en/p/insert-unity/)
+> Original article: [How to embed UnityWeb3D into a page](https://blog.zhoujump.com/en/p/insert-unity/)
 
 With the improvement of equipment performance now, it is no longer a rare thing to insert 3D models into the website. Moreover, inserting 3D elements can greatly improve the user experience, and some user interactions can give people a very amazing experience.
 ![An example of inserting a UnityWeb3D effect](1-1.gif)

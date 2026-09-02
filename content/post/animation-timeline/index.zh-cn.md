@@ -13,7 +13,7 @@ date: 2025-09-14 00:00:00+0000
 weight: 1
 image: cover.zh-cn.webp
 ---
-> 文章在个人网站中发布，原文链接：[记录一个纯CSS实现滚动驱动动画的效果](https://blog.zhoujump.club/p/animation-timeline/)
+> 文章在个人网站中发布，原文链接：[记录一个纯CSS实现滚动驱动动画的效果](https://blog.zhoujump.com/p/animation-timeline/)
 ## 先看一下这个简单的案例
 ### 代码：
 你也可以直接划到下边看效果。

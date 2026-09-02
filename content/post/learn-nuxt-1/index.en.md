@@ -11,7 +11,7 @@ tags:
     - Nuxt
 weight: 1
 ---
-> This article is published on my personal website. Original link: [Nuxt Learning Journey 1](https://blog.zhoujump.club/p/learn-nuxt-1/)
+> This article is published on my personal website. Original link: [Nuxt Learning Journey 1](https://blog.zhoujump.com/p/learn-nuxt-1/)
 
 ## Introduction
 

@@ -11,7 +11,7 @@ tags:
 weight: 1
 ---
 
-> This article was originally published on my personal website: [Deleting Cloudflare Pages projects with many deployments](https://blog.zhoujump.club/en/p/delete-cloudflare-project/)
+> This article was originally published on my personal website: [Deleting Cloudflare Pages projects with many deployments](https://blog.zhoujump.com/en/p/delete-cloudflare-project/)
 
 ## Small number of deployments
 If your deployment count is only one or two hundred, you can try manually deleting old deployments. Delete until the deployment count is less than one hundred, and then you should be able to delete the project.

@@ -13,17 +13,17 @@ tags:
 weight: 1
 ---
 
-> Original article: [Pure CSS Rating Component](https://blog.zhoujump.club/en/p/input-star/)
+> Original article: [Pure CSS Rating Component](https://blog.zhoujump.com/en/p/input-star/)
 
 ## See the effect first
 The following is a rating component implemented purely by CSS. Click on the star to rate. Different ratings will display different colors.
 <div class="cont"> <input class="radio" name="star" id="star1" type="radio"> <input class="radio" name="star" id="star2" type="radio"> <input class="radio" name="star" id="star3" type="radio"> <input class="radio" name="star" id="star4" type="radio"> <input class="radio" name="star" id="star5" type="radio"> <label class="label" for="star1">★</label> <label class="label" for="star2">★</label> <label class="label" for="star3">★</label> <label class="label" for="star4">★</label> <label class="label" for="star5">★</label> </div> <style> .cont{ position: relative; display: flex; } .radio{ display: none; } .label{ color: #ccc; transition-duration:.3s; font-size: 24px; scale:.9; } #star1:checked ~ .label:nth-child(6), #star2:checked ~ .label:nth-child(-n+7) { color:#515A5A; transition-duration:.3s; scale: 1; } #star3:checked ~ .label:nth-child(-n+8), #star4:checked ~ .label:nth-child(-n+9){ color:#3498db; transition-duration:.3s; scale: 1; } #star5:checked ~ .label{ color:#f1c40f; transition-duration:.3s; scale: 1; }
 </style>
 
-This component is an upgraded version of the article [Realize option selection effect without using js](https://blog.zhoujump.club/p/checked-css/). Some prerequisite knowledge is mentioned in it. Students who are interested can read this article first.
+This component is an upgraded version of the article [Realize option selection effect without using js](https://blog.zhoujump.com/p/checked-css/). Some prerequisite knowledge is mentioned in it. Students who are interested can read this article first.
 
 ## Subsequent sibling selector `~`
-In the article [Realize option selection effect without using js](https://blog.zhoujump.club/p/checked-css/), we used the adjacent sibling selector `+`, which can select the next element of the target element. But in the above case, we hope that when clicking on the star, all the stars will become selected. At this time, we need to use the subsequent sibling selector `~`, which can select all the sibling elements after the target element.
+In the article [Realize option selection effect without using js](https://blog.zhoujump.com/p/checked-css/), we used the adjacent sibling selector `+`, which can select the next element of the target element. But in the above case, we hope that when clicking on the star, all the stars will become selected. At this time, we need to use the subsequent sibling selector `~`, which can select all the sibling elements after the target element.
 
 Let's look at this simple example:
 

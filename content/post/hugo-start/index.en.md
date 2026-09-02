@@ -13,7 +13,7 @@ tags:
 weight: 1
 ---
 
-> Original article: [HUGO, start!](https://blog.zhoujump.club/en/p/hugo-start/)
+> Original article: [HUGO, start!](https://blog.zhoujump.com/en/p/hugo-start/)
 
 >Foreword: This article will teach you how to start a hugo project at the speed of light, and host it for free on gitlab pages for everyone to access, just like the website you are seeing now.
 ## Prepare an account

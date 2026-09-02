@@ -12,7 +12,7 @@ tags:
     - HTML
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[纯CSS实现输入框的编辑和保存按钮](https://blog.zhoujump.club/p/checked-input/)
+> 文章在个人网站中发布，原文链接：[纯CSS实现输入框的编辑和保存按钮](https://blog.zhoujump.com/p/checked-input/)
 
 ## 先看效果
 点击右侧`编辑`激活左侧input,点击右侧`完成`保存输入框内容
@@ -64,16 +64,16 @@ weight: 1
 我们都知道可以通过`<input disabled="true"/>`中disabled属性来使输入框不可编辑，但是它作为元素属性需要使用js来修改。那我们纯css环境如何实现呢？
 答案是使用`pointer-events`属性，它用来定义元素如何响应用户的点击。例如下边这两个例子：
 
-<a style="pointer-events: auto;" href='https://blog.zhoujump.club' target="_blank">pointer-events: auto</a><br/>
-<a style="pointer-events: none;"  href='https://blog.zhoujump.club' target="_blank">pointer-events: none</a>
+<a style="pointer-events: auto;" href='https://blog.zhoujump.com' target="_blank">pointer-events: auto</a><br/>
+<a style="pointer-events: none;"  href='https://blog.zhoujump.com' target="_blank">pointer-events: none</a>
 ```html
 <!-- 这个a标签设置了pointer-events: auto -->
 <a style="pointer-events: auto;"
-    href='https://blog.zhoujump.club'
+    href='https://blog.zhoujump.com'
     target="_blank">pointer-events: auto</a>
 <!-- 这个a标签设置了pointer-events: auto -->
 <a style="pointer-events: none;" 
-    href='https://blog.zhoujump.club'
+    href='https://blog.zhoujump.com'
     target="_blank">pointer-events: none</a>
 ```
 

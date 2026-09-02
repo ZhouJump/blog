@@ -13,7 +13,7 @@ tags:
 weight: 1
 ---
 
-> Original article: [Pure CSS to achieve the effect of circular flipping](https://blog.zhoujump.club/en/p/index-checked/)
+> Original article: [Pure CSS to achieve the effect of circular flipping](https://blog.zhoujump.com/en/p/index-checked/)
 
 ## See the effect first
 Click on the card to switch one, and the entire implementation process does not use js. In addition to the two cards, this sample actually has two transparent `input`s. You actually click on these two `input`s, and these two `input`s will modify their own `z-index` properties after clicking, ensuring that you will definitely click on another one next time you click.
@@ -117,7 +117,7 @@ The following is the full code for the flip card example:
 ```
 
 But it seems that this can only flip between two cards, so how can we increase the number of cards?
-At this time, you only need to combine the ideas in [Realizing the Rating Component without Using JS](https://blog.zhoujump.club/p/input-star/). In this case, selecting a star can select all the stars before this star. Similarly, we can set the z-index value of all the previous radio buttons to 0 when selecting a radio button, and reset all z-index after selecting the last radio button to achieve a cyclic flip.
+At this time, you only need to combine the ideas in [Realizing the Rating Component without Using JS](https://blog.zhoujump.com/p/input-star/). In this case, selecting a star can select all the stars before this star. Similarly, we can set the z-index value of all the previous radio buttons to 0 when selecting a radio button, and reset all z-index after selecting the last radio button to achieve a cyclic flip.
 
 >Of course, the theoretical significance of this case is greater than the practical significance. Every time a card is added, a lot of css code will be generated, which is not as good as js. But this case can still be used as a good case to illustrate the use of z-index.
 

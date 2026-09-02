@@ -12,7 +12,7 @@ tags:
     - Javascript
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[随时随地，一键召唤看板娘。](https://blog.zhoujump.club/p/creat-waifu/)
+> 文章在个人网站中发布，原文链接：[随时随地，一键召唤看板娘。](https://blog.zhoujump.com/p/creat-waifu/)
 
 ## 如何使用
 将下面这个蓝色方块拖拽至收藏夹栏再松开鼠标，浏览器会自动创建一个书签。

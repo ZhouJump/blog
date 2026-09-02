@@ -12,7 +12,7 @@ tags:
 - Javascript
 weight: 1
 ---
-Original link: https://blog.zhoujump.club/en/p/creat-waifu/
+Original link: https://blog.zhoujump.com/en/p/creat-waifu/
 
 ## How to use
 Drag the blue square below to the favorites bar and release the mouse, the browser will automatically create a bookmark.

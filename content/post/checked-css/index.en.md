@@ -12,7 +12,7 @@ tags:
 - CSS
 weight: 1
 ---
-> Original article: [Pure CSS to achieve option selection effect](https://blog.zhoujump.club/en/p/checked-css/)
+> Original article: [Pure CSS to achieve option selection effect](https://blog.zhoujump.com/en/p/checked-css/)
 
 ## See the effect first
 You can switch different options by clicking, and this example does not use js but is completely implemented with css.

@@ -12,7 +12,7 @@ tags:
 - CSS
 weight: 1
 ---
-> Original article: [Cleverly use attribute selectors to implement filters in pure CSS](https://blog.zhoujump.club/en/p/checkbox-filter/)
+> Original article: [Cleverly use attribute selectors to implement filters in pure CSS](https://blog.zhoujump.com/en/p/checkbox-filter/)
 
 ## Take a look at the effect of this example first
 <div class="filter">

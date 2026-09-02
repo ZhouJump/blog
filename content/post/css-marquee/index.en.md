@@ -12,7 +12,7 @@ tags:
 - HTML
 weight: 1
 ---
-> Original article: [Pure CSS to achieve the marquee effect](https://blog.zhoujump.club/en/p/css-marquee/)
+> Original article: [Pure CSS to achieve the marquee effect](https://blog.zhoujump.com/en/p/css-marquee/)
 
 ## See the effect first
 <div class="marquee">

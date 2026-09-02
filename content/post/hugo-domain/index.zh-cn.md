@@ -13,7 +13,7 @@ tags:
     - 域名
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[HUGO，域名！](https://blog.zhoujump.club/p/hugo-domain/)
+> 文章在个人网站中发布，原文链接：[HUGO，域名！](https://blog.zhoujump.com/p/hugo-domain/)
 
 >前言：本文继续上文，讲一讲如何购买一个域名，然后将咱的网页绑定在其上。
 >[阅读之前的文章](/tags/hugo/)
@@ -45,7 +45,7 @@ weight: 1
 ![点击新域名按钮](2-1.webp)
 
 输入一个你所购买的域名的子域名,然后点击**创建新域名**
->我购买了`zhoujump.club`，它被称为一个根域名。例如`www.zhoujump.club`,`blog.zhoujump.club`这样的域名就是子域名，你可以随便取名。当然你也可以使用根域名，但是可能会在下一步遇到麻烦。
+>我购买了`zhoujump.com`，它被称为一个根域名。例如`www.zhoujump.com`,`blog.zhoujump.com`这样的域名就是子域名，你可以随便取名。当然你也可以使用根域名，但是可能会在下一步遇到麻烦。
 
 ![创建新域名](2-2.webp)
 

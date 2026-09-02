@@ -13,7 +13,7 @@ tags:
     - Javascript
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[如何向页面中嵌入UnityWeb3D](https://blog.zhoujump.club/p/insert-unity/)
+> 文章在个人网站中发布，原文链接：[如何向页面中嵌入UnityWeb3D](https://blog.zhoujump.com/p/insert-unity/)
 
 随着现在设备性能的提升，向网站中插入3D模型已经不是啥稀奇事情了。而且插入3D元素能极高地提高用户体验，再加上一些用户交互就能给人非常惊艳的体验。  
 ![插入UnityWeb3D效果的示例](1-1.gif)

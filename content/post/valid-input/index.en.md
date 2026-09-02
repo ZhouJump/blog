@@ -13,7 +13,7 @@ tags:
 weight: 1
 ---
 
-> Original article: [Pure CSS to achieve a cool input box effect](https://blog.zhoujump.club/en/p/valid-input/)
+> Original article: [Pure CSS to achieve a cool input box effect](https://blog.zhoujump.com/en/p/valid-input/)
 
 ## See the effect first
 
@@ -41,7 +41,7 @@ line-height: 18px;
 These two pseudo-classes can be used on `input` and `select` elements to select input boxes that have passed or failed validation. Let's learn about them through the following simple example:
 This input box will check whether the input is an email address, otherwise the background color will be red warning.
 
-<input value="x@zhoujump.club" class="demo-input-2" type="email"/>
+<input value="x@zhoujump.com" class="demo-input-2" type="email"/>
 <style>
 .demo-input-2:invalid{background:red}
 </style>

@@ -11,7 +11,7 @@ tags:
 - Javascript
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[自己写一个小小vue - getter与setter](https://blog.zhoujump.club/p/getter-setter/)
+> 文章在个人网站中发布，原文链接：[自己写一个小小vue - getter与setter](https://blog.zhoujump.com/p/getter-setter/)
 
 我相信各位前端大佬和小佬们都听过这句话：
 > vue2使用getter与setter来控制数据，vue3则直接使用proxy。

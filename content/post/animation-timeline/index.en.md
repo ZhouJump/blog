@@ -13,7 +13,7 @@ date: 2025-09-14 00:00:00+0000
 weight: 1
 image: cover.en.webp
 ---
-> This article is published on my personal website, original link: [A CSS-Only Scroll-Driven Animation Effect](https://blog.zhoujump.club/p/animation-timeline/)
+> This article is published on my personal website, original link: [A CSS-Only Scroll-Driven Animation Effect](https://blog.zhoujump.com/p/animation-timeline/)
 ## First, let's look at this simple example
 ### Code:
 You can also scroll down to see the effect directly.

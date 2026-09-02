@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.zhoujump.club/index.xml
+Sitemap: https://blog.zhoujump.com/index.xml

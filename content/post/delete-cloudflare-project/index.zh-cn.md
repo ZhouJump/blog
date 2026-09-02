@@ -11,7 +11,7 @@ tags:
 weight: 1
 ---
 
-> 文章在个人网站中发布，原文链接：[删除具有大量部署的cloudflare pages项目](https://blog.zhoujump.club/p/delete-cloudflare-project/)
+> 文章在个人网站中发布，原文链接：[删除具有大量部署的cloudflare pages项目](https://blog.zhoujump.com/p/delete-cloudflare-project/)
 
 ## 部署量不是很大
 如果你的部署量也就是一两百，可以尝试手动删除旧的部署，删除到部署数量小于一百一般就能删除了。

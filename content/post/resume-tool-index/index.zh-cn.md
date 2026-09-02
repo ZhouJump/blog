@@ -12,11 +12,11 @@ tags:
     - 个人项目
 weight: 1
 ---
-> 文章在个人网站中发布，原文链接：[我的简历编辑器上线了](https://blog.zhoujump.club/p/resume-tool-index/)
+> 文章在个人网站中发布，原文链接：[我的简历编辑器上线了](https://blog.zhoujump.com/p/resume-tool-index/)
 
 简历布局自由拖拽，内置两套简洁美观的主题可以自由切换，可以导出为图片或者直接调用打印。免费使用，无需登录。欢迎使用。
 
-<a target="_blank" href="https://resume.zhoujump.club/">
+<a target="_blank" href="https://resume.zhoujump.com/">
     <div class="enter-button">立即进入</div>
 </a>
 <style>
