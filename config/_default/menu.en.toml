@@ -34,7 +34,7 @@ icon = "brand-bilibili"
 [[social]]
 identifier = "email"
 name = "Email"
-url = "mailto:x@zhoujump.club"
+url = "mailto:x@zhoujump.com"
 
 [social.params]
 icon = "brand-email"

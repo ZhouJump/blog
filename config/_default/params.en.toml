@@ -105,7 +105,7 @@ clientSecret = ""
 autoCreateIssue = false
 
 [comments.waline]
-serverURL = "comments.zhoujump.club"
+serverURL = "comments.zhoujump.com"
 lang = "en-US"
 visitor = ""
 avatar = ""
@@ -117,7 +117,7 @@ requiredMeta = ['nick']
 admin = "Admin"
 
 [comments.artalk]
-server = "https://comments.zhoujump.club"
+server = "https://comments.zhoujump.com"
 site = "Zhou's Blog"
 lang = "en-US"
 
