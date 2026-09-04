@@ -11,6 +11,10 @@ links:
     description: my website home
     website: https://zhoujump.com/
 
+  - title: blogtalk
+    description: A Chinese independent blog aggregator website
+    website: https://blogtalk.org/
+
 menu:
     main: 
         weight: 4

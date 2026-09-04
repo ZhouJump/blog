@@ -12,6 +12,10 @@ links:
     description: 我的主页
     website: https://zhoujump.com/   
 
+  - title: 博客说
+    description: 中文独立博客收录与文章 RSS 聚合网站
+    website: https://blogtalk.org/
+
 menu:
     main: 
         weight: 4
